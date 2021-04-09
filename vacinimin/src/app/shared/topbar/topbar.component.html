@@ -1,0 +1,50 @@
+<div class="box">
+
+    <div class="tittle">
+        VaciniMim
+    </div>
+
+
+    <div class="user-menu">
+        <div *ngIf="!tinyScreen && showOption " class="options-list">
+            <div class="option">
+                Log-Out
+            </div>
+    
+            <div class="option">
+                Admin            
+            </div>
+    
+            <div class="option">
+                Gpv
+            </div>
+    
+            <div class="option">
+                Cliente
+            </div>
+        </div>
+
+        <div *ngIf="tinyScreen && showOption" class="card-options-list">
+            <div class="option">
+                Log-Out
+            </div>
+    
+            <div class="option">
+                Admin            
+            </div>
+    
+            <div class="option">
+                Gpv
+            </div>
+    
+            <div class="option">
+                Cliente
+            </div>
+        </div>
+
+        <div (click)="onClickMenu()" class= "menu-btn">
+            <span *ngIf="!showOption" class="menu-bar-icon"></span>
+            <span *ngIf="showOption" class="rotated-menu-bar-icon"></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    height: max(7vh, 54px);
+    background-color: var(--c-blue-primary);
+}
+
+div.tittle {
+    margin-left: 10px;
+    align-self: center;
+    font-size: 22px;
+    font-family: var(--primary-font);
+    color: var(--c-white-primary);
+}
+
+.user-menu {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.option {
+    padding-right: 30px;
+    font-size: 18px;
+    font-family: var(--primary-font);
+    color: var(--c-white-primary);
+}
+
+.menu-btn {
+    
+    width: 49px;
+    height: 38px;
+    align-self: center;
+    border: 1px solid var(--c-white-primary);
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.menu-bar-icon {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 7px;
+    width: 28px;
+    height: 26px;
+    background-image: url("../../../assets/icons/menu-bar.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.rotated-menu-bar-icon {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 7.5px;
+    width: 25px;
+    height: 26px;
+    background-image: url("../../../assets/icons/menu-bar.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+ }
+
+ @media screen and (max-width: 700px) {
+    .box {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        height: max(9vh, 64px);
+        min-height: 53px;
+        background-color: var(--c-blue-primary);
+    }
+
+    div.tittle {
+        margin-top: 20px;
+        margin-left: 12px;
+        align-self: center;
+        font-size: 24px;
+        font-family: var(--primary-font);
+        color: var(--c-white-primary);
+    }
+
+    .menu-btn {
+        width: 49px;
+        height: 41px;
+    }
+
+    .menu-bar-icon {
+        margin-top: 10px;
+    }
+    
+    .rotated-menu-bar-icon { 
+        margin-top: 7px;
+    }
+
+    .card-options-list {
+        margin-top: max(9vh, 64px);
+        position: absolute;
+        min-width: 120px;
+        min-height: 100px;
+        background: #FFFFFF;
+        border: 1px solid var(--c-gray-popup-border-2);
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+    
+    .option{
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 20px;
+        font-family: var(--primary-font);
+        color: var(--c-black-text);
+    }
+    
+  }

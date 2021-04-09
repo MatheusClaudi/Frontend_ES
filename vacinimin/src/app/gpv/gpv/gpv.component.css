@@ -1,0 +1,28 @@
+.content {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.lateral-bar {
+    width: max(16%, 235px)
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - max(16%, 235px));
+    max-width: calc(100% - max(16%, 235px));
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .lateral-bar {
+        position: absolute;
+    }
+
+    .vertical {
+        width: 100%;
+        max-width: 100%;
+    }
+}

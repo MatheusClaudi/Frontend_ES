@@ -1,0 +1,33 @@
+
+<div *ngIf="!showMenu" class="show-menu-btn">
+    <span (click)="onShowMenu()" class="show-menu-icon"></span>
+</div>
+
+
+<div *ngIf="showMenu" class="box">
+
+    <span (click)="onHideMenu()" class="hide-menu-icon"></span>
+
+
+    <div class="menu">
+        <div class="tittle">
+            Navegação
+        </div>
+        
+        <div class="optionsList">
+
+            <div class="option">
+                Dados pessoais
+            </div>
+
+            <div class="option">
+                Postos de vacinação
+            </div>
+
+            <div class="option">
+                Agendamentos
+            </div>
+        </div>
+    </div>
+
+</div>

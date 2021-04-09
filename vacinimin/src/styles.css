@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+
+    /* Primary means that be present in most of time*/
+    /* blue is a lighter than blue-2*/
+
+    --c-blue-primary:#29B6F6;
+    --c-white-primary:#FFFFFF;
+    --c-blue-2-primary: #03A9F4;
+    --c-black-primary: #383838;
+
+    --c-green:#64DD17;
+    --c-green-2: #00C853;
+
+    --c-red:#FF8A80;
+    --c-red-2: #FF1744;
+
+    --c-blue: #03A9F4;
+    --c-blue-marker: #3C80F1;
+
+
+    --c-blue-gray: #7E9FBD;
+    --c-blue-gray-2: #6187C8;
+    --c-blue-gray-3: #5373A8;
+    
+    --c-gray-border-topbar: #CBCBCB;
+
+    --c-gray-card-border: #E0E0E0;
+    --c-gray-card-border-2: #9C9A9A;
+    --c-gray-card-border-3: #383838;
+
+    --c-gray-popup-border: #575656;
+    --c-gray-popup-border-2: #555555;
+
+    --c-gray-popup-fill: #F8F8F8;
+
+    --c-gray-text: #585858;
+    --c-black-text: #1D1D1D;
+
+
+    --c-black-field-border: #252525;
+    --c-black-field-text-content: #262626;
+    --c-gray-field-text-tittle: #5C5C5C;
+
+    --c-gray-field-light-border: #5C5C5C;
+    --c-gray-field-light-text-content: #6C6F72;
+
+    --c-black-table-text: #262626;
+
+
+    --primary-font: Garamond, Georgia, serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
