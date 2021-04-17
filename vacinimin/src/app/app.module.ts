@@ -14,6 +14,9 @@ import { CoreModule } from './core/core.module';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { UnloggedModule } from './unlogged/unlogged.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { UnloggedModule } from './unlogged/unlogged.module';
     GpvModule,
     StandartModule,
     UnloggedModule,
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

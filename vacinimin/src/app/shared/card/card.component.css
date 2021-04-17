@@ -1,0 +1,32 @@
+@media screen and (max-width: 700px) {
+
+    .title{
+        position: absolute;
+        left: 29px;
+        right: 115px;
+        top: 49px;
+        bottom: 0%;
+
+        font-family: Baskervville;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 31px;  
+        color: #1E1E1E;
+        ;
+    }
+
+    .card-content{
+        position: absolute;
+        display: flex;
+        width: 357px;
+        height: 627px;
+        left: 25px;
+        top: 88px;
+
+        background: #FFFFFF;
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        border-radius: 25px;
+    }
+}

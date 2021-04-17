@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StandartComponent implements OnInit {
 
+  title = 'Postos de vacinação';
+
   constructor() { }
 
   ngOnInit(): void {

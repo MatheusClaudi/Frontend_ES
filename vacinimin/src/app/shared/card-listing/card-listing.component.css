@@ -1,0 +1,103 @@
+@media screen and (max-width: 700px) {
+    
+    .card-listing-content{
+        position: absolute;
+        left: 35px;
+        right: 35px;
+        top: 245px;
+    }
+
+    .title-card-listing{
+        position: absolute;
+        width: 95px;
+        height: 26px;
+        left: 41px;
+        top: 15px;
+
+        font-family: Baskervville;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+
+        color: #1E1E1E;
+    }
+
+    .subtitle{
+        position: absolute;
+        width: 190px;
+        height: 23px;
+        left: 19px;
+        top: 51px;
+
+        font-family: Baskervville;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+
+        color: #585858;
+    }
+
+    .check{
+        position: absolute;
+        width: 55px;
+        height: 61px;
+        left: 274px;
+        top: -10px;        
+    }
+    
+    .marker{
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        left: 19px;
+        top: 24.95px;
+        
+        background: #1E1E1E;
+        transform: rotate(-45deg);
+    }
+    
+    /* mudar o nome dessa classe */
+    .cep{
+        position: absolute;
+        width: 82px;
+        height: 16px;
+        left: 216px;
+        top: 56px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        
+        color: #585858;
+    }
+
+    .card-content{
+        bottom: 0%;
+        width: 341px;
+        height: 91px;
+
+        background: #FFFFFF;
+        border: 1px solid #555555;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+
+    p{
+        position: absolute;
+        width: 95px;
+        height: 26px;
+        left: 41px;
+        top: 15px;
+
+        font-family: Baskervville;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+}

@@ -16,6 +16,10 @@
 
 
 @media screen and (max-width: 700px) {
+    
+    .card-content {
+        position: absolute;
+    }
 
     .lateral-bar {
         position: absolute;

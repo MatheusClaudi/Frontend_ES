@@ -1,12 +1,16 @@
-
 <div class="content">
     
     <app-lateral-bar class="lateral-bar"></app-lateral-bar>        
     
     <div class="vertical">
         <app-topbar class="top-bar"></app-topbar>
-        
-        <router-outlet name="standart"></router-outlet>
+    </div>
+
+    <div class="card-content">
+        <app-card [title]="title"></app-card>
+        <app-card-listing></app-card-listing>
     </div>
 </div>
+
+<router-outlet name="standart"></router-outlet>
 
