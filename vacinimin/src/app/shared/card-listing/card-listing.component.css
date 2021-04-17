@@ -39,7 +39,7 @@
         color: #585858;
     }
 
-    .check{
+    .info1{
         position: absolute;
         width: 55px;
         height: 61px;
@@ -58,8 +58,7 @@
         transform: rotate(-45deg);
     }
     
-    /* mudar o nome dessa classe */
-    .cep{
+    .info2{
         position: absolute;
         width: 82px;
         height: 16px;
