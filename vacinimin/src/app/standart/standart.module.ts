@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { StandartRoutingModule } from './standart-routing.module';
-import { StandartComponent } from './standart/standart.component';
 import { SharedModule } from '../shared/shared.module';
 import { FilterComponent } from './filter/filter.component';
+import { StandartPostListsComponent } from './standart-posts-list/standart-posts-list.component';
 
 @NgModule({
   declarations: [
-    StandartComponent,
+    StandartPostListsComponent,
     FilterComponent
   ],
   imports: [

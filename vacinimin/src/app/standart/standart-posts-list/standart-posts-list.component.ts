@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-standart',
-  templateUrl: './standart.component.html',
-  styleUrls: ['./standart.component.css']
+  templateUrl: './standart-posts-list.component.html',
+  styleUrls: ['./standart-posts-list.component.css']
 })
-export class StandartComponent implements OnInit {
+export class StandartPostListsComponent implements OnInit {
 
   title = 'Postos de vacinação';
   // lista com informações dos postos

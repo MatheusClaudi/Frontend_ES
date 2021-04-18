@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StandartPostListsComponent } from './standart-posts-list.component';
 
-import { StandartComponent } from './standart.component';
 
 describe('StandartComponent', () => {
-  let component: StandartComponent;
-  let fixture: ComponentFixture<StandartComponent>;
+  let component: StandartPostListsComponent;
+  let fixture: ComponentFixture<StandartPostListsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StandartComponent ]
+      declarations: [ StandartPostListsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StandartComponent);
+    fixture = TestBed.createComponent(StandartPostListsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
