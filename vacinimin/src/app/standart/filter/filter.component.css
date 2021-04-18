@@ -1,9 +1,8 @@
 @media screen and (max-width: 700px) {
     .select-city{
         position: absolute;
-        left: 178px;
-        right: 148px;
-        top: 184px;
+        right: 10%;
+        top: 21%;
         bottom: 0%;
         width: 175px;
         height: 38px;

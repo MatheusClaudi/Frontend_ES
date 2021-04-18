@@ -6,9 +6,30 @@
         <app-topbar class="top-bar"></app-topbar>
     </div>
 
-    <div class="card-content">
-        <app-card [title]="title"></app-card>
-        <app-card-listing></app-card-listing>
+    <app-card [title]="title"></app-card>
+    
+    <div class="posts-list">
+        <ul>
+            <li class="post-card" *ngFor="let post of listPosts; let i = index">
+                <app-card-listing
+                    *ngIf="listPosts[i].disponivel"
+                    [title]="listPosts[i].nome"
+                    [subtitle]="listPosts[i].endereco"
+                    [info1]="pathCheck"
+                    [info2]="listPosts[i].cep"
+                >
+                </app-card-listing>
+                <app-card-listing
+                    *ngIf="listPosts[i].disponivel === false"
+                    [title]="listPosts[i].nome"
+                    [subtitle]="listPosts[i].endereco"
+                    [info1]="pathNotCheck"
+                    [info2]="listPosts[i].cep"
+                >
+                </app-card-listing>
+            </li>
+        </ul>
+
     </div>
 </div>
 

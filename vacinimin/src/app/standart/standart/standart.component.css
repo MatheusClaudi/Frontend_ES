@@ -30,4 +30,25 @@
         width: 100%;
         max-width: 100%;
     }
+    
+    div.posts-list{
+        position: absolute;
+        
+        min-width: 84%;
+        left: 32px;
+        top: 28%;
+    }
+    
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li.post-card{
+       margin-top: 10px;
+    }
+
+
+   
 }

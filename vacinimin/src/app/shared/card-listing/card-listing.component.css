@@ -1,18 +1,9 @@
 @media screen and (max-width: 700px) {
-    
-    .card-listing-content{
-        position: absolute;
-        left: 35px;
-        right: 35px;
-        top: 245px;
-    }
 
     .title-card-listing{
         position: absolute;
-        width: 95px;
+        width: 105px;
         height: 26px;
-        left: 41px;
-        top: 15px;
 
         font-family: Baskervville;
         font-style: normal;
@@ -43,7 +34,7 @@
         position: absolute;
         width: 55px;
         height: 61px;
-        left: 274px;
+        left: 80%;
         top: -10px;        
     }
     
@@ -62,7 +53,7 @@
         position: absolute;
         width: 82px;
         height: 16px;
-        left: 216px;
+        left: 75%;
         top: 56px;
         
         font-family: Roboto;
@@ -75,9 +66,11 @@
     }
 
     .card-content{
+        position: relative;
         bottom: 0%;
-        width: 341px;
+        min-width: 10%;
         height: 91px;
+        padding-left: 0%;
 
         background: #FFFFFF;
         border: 1px solid #555555;
@@ -87,7 +80,7 @@
 
     p{
         position: absolute;
-        width: 95px;
+        width: 20%;
         height: 26px;
         left: 41px;
         top: 15px;

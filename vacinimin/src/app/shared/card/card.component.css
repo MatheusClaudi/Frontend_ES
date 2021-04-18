@@ -4,7 +4,8 @@
         position: absolute;
         left: 29px;
         right: 115px;
-        top: 49px;
+        max-width: 90%;
+        top: 6%;
         bottom: 0%;
 
         font-family: Baskervville;
@@ -18,9 +19,8 @@
 
     .card-content{
         position: absolute;
-        display: flex;
-        width: 357px;
-        height: 627px;
+        min-width: 87%;
+        min-height: 81%;
         left: 25px;
         top: 88px;
 
