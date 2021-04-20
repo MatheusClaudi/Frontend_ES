@@ -36,7 +36,7 @@ export class StandartPostListsComponent implements OnInit {
     }
   ];
 
-  pathCheck = "../../../assets/icons/vaccineCheck.svg";
+  pathCheck = "../../../assets/icons/GreenFlag.svg";
   pathNotCheck = "../../../assets/icons/RedFlag.svg";
 
   constructor() { }

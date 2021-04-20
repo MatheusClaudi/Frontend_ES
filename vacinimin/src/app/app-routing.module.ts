@@ -17,8 +17,8 @@ const routes: Routes = [
   { 
     path: 'standart', 
     loadChildren: () => StandartModule,
-    //canActivate: [AuthGuard],
-    //data: { roles: [Role.Standart] }
+    // canActivate: [AuthGuard],
+    // data: { roles: [Role.Standart] }
   },
   { 
     path: 'gpv', 

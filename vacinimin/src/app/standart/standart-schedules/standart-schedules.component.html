@@ -1,0 +1,40 @@
+<div class="content">
+    
+    <app-lateral-bar class="lateral-bar"></app-lateral-bar>        
+    
+    <div class="vertical">
+        <app-topbar class="top-bar"></app-topbar>
+    </div>
+
+    <app-card [title]="title"></app-card>
+
+    <div class="schedule-list">
+        <ul>
+            <li class="post-card" *ngFor="let post of listSchedules; let i = index">
+                <app-card-listing
+                    [title]="listSchedules[i].nomePosto"
+                    [subtitle]="listSchedules[i].data"
+                    [subtitle2]="listSchedules[i].hora"
+                    [info1]="listSchedules[i].status"
+                    [info2]="listSchedules[i].dose"
+                    [imagem]="false"
+                >
+                </app-card-listing>
+                <!-- <app-card-listing
+                    *ngIf="listSchedules[i].disponivel === false"
+                    [title]="listSchedules[i].nome"
+                    [subtitle]="listSchedules[i].endereco"
+                    [info1]="pathNotCheck"
+                    [info2]="listSchedules[i].cep"
+                >
+                </app-card-listing> -->
+            </li>
+        </ul>
+
+    </div>
+
+    
+</div>
+
+<router-outlet name="standart"></router-outlet>
+
