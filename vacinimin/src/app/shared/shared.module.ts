@@ -8,7 +8,7 @@ import { LateralBarComponent } from './lateral-bar/lateral-bar.component';
 @NgModule({
   declarations: [
     TopbarComponent,
-    LateralBarComponent
+    LateralBarComponent,
   ],
   imports: [
     CommonModule

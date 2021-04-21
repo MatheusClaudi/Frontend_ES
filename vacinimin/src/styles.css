@@ -1,3 +1,5 @@
+@import '~roboto-fontface/css/roboto/roboto-fontface.css';
+
 /* You can add global styles to this file, and also import other style files */
 
 :root {
@@ -48,8 +50,14 @@
 
     --c-black-table-text: #262626;
 
+    --c-blue-check-box-marker: rgba(60, 128, 241, 0.69);
+
 
     --primary-font: Garamond, Georgia, serif;
+
+    --secondary-font: Roboto, Helvetica, Arial, sans-serif;
+
+    --height-topbar: max(9vh, 64px);
 }
 
 
@@ -58,3 +66,170 @@ body {
     padding: 0;
 }
 
+
+.field-tittle {
+    font-family: var(--primary-font);
+    font-size: 16px;
+    line-height: 21px;
+    color: var( --c-gray-field-text-tittle);
+    margin-bottom: 4px;
+}
+
+.field-box {
+    width: 125px;
+    height: 38px;
+    margin-left: 9px;
+    border: 1px solid var(--c-black-field-border);
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+
+}
+
+.field-content {
+    
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: var( --c-black-field-text-content); 
+    
+    margin-left: 13px;
+    margin-top: 9px;
+}
+
+.error-message {
+    
+    font-family: var(--primary-font);
+    font-size: 16px;
+    color: var( --c-red-2 );
+
+    margin-left: 14px ;
+}
+
+
+
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 193px;
+    height: 41px;
+    background: var(--c-blue-primary);
+    border: 1px solid var(--c-white-primary);
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding-top: 7px;
+    padding-left: 18px;
+}
+
+.btn-name {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: var(--c-white-primary);
+}
+
+.btn-icon {
+    margin-top: 4px;
+    margin-right: 17px;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+            
+.check-box-tittle {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: var( --c-black-field-text-content); 
+
+}
+
+.check-box-options {
+    margin-top: 18px;
+}
+
+.check-box-option {
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+    margin-bottom: 6px;
+}
+
+.check-box-option-icon {
+    background: var(--c-white-primary);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 0.5px solid var(--c-black-field-border);
+}
+
+.check-box-option-icon-marked {
+    background:  var(--c-blue-check-box-marker);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 0.5px solid var(--c-black-field-border);
+}
+
+.check-box-option-name {
+
+    margin-left: 12px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: var( --c-black-field-text-content); 
+
+}
+
+
+
+
+.btn-selector {
+    width: 186px;
+    height: 38px;   
+    border: 1px solid var(--c-black-field-border);
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-selector-name {
+
+
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--c-black-field-text-content);
+
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+.btn-selector-icon {
+
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url("./assets/icons/selector.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
