@@ -7,13 +7,15 @@ import { FilterComponent } from './filter/filter.component';
 import { StandartPostListsComponent } from './standart-posts-list/standart-posts-list.component';
 import { StantardtPostDataComponent } from './stantardt-post-data/stantardt-post-data.component';
 import { StandartSchedulesComponent } from './standart-schedules/standart-schedules.component';
+import { StandartScedulesDataComponent } from './standart-scedules-data/standart-scedules-data.component';
 
 @NgModule({
   declarations: [
     StandartPostListsComponent,
     FilterComponent,
     StantardtPostDataComponent,
-    StandartSchedulesComponent
+    StandartSchedulesComponent,
+    StandartScedulesDataComponent
   ],
   imports: [
     CommonModule,

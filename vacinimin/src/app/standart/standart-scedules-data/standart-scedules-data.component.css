@@ -1,0 +1,48 @@
+.data-list{
+    position: absolute;
+    min-width: 84%;
+    left: 32px;
+    top: 27%;
+}
+
+.info-schedule{
+    position: relative;
+    margin-top: 10px;
+}
+
+input{
+    position: relative;
+    min-width: 70%;
+    height: 38px;
+    left: 14%;
+    top: 139px;
+    padding: 13px;
+    
+    border: 1px solid #252525;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #262626;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.label-input{
+    position: absolute;
+    width: 100%;
+    height: 28px;
+    left: 12%;
+    top: 112px;
+
+    font-family: Baskervville;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #5C5C5C;
+}
