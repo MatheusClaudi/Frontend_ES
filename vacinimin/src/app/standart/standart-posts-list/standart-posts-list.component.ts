@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StandartPostListsComponent implements OnInit {
 
+  listCities = [
+    "Campina Grande",
+    "Lagoa Seca",
+    "Queimadas",
+    "Esperança"
+  ]
+
   title = 'Postos de vacinação';
   // lista com informações dos postos
   listPosts = [

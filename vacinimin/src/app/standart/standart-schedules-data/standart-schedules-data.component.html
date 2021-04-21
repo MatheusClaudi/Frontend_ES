@@ -1,0 +1,49 @@
+<div class="content">
+    
+    <app-lateral-bar class="lateral-bar"></app-lateral-bar>        
+    
+    <div class="vertical">
+        <app-topbar class="top-bar"></app-topbar>
+    </div>
+
+    <app-card [title]="title"></app-card>
+
+    <div class="data-list">
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Nome posto:</label>
+            <input class="field-content" type="text"value={{schedule.posto}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Vacina:</label>
+            <input class="field-content" type="text"value={{schedule.vacina}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Data:</label>
+            <input class="field-content" type="date" value={{schedule.data}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Horário:</label>
+            <input class="field-content" type="text" value={{schedule.horario}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Nº dose:</label>
+            <input class="field-content" type="text" value={{schedule.nDose}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Nº dose:</label>
+            <input class="field-content" type="date" value={{schedule.dataAbertura}}>
+        </div>
+
+    </div>
+
+    
+</div>
+
+<router-outlet name="standart"></router-outlet>
+

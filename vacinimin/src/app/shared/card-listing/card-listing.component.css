@@ -31,6 +31,10 @@
         color: #585858;
     }
 
+    .withImage .info2{
+        font-size: 14px;
+    }
+
     .info1{
         position: absolute;
         width: 50px;

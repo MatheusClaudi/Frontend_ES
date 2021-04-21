@@ -7,6 +7,10 @@
     </div>
 
     <app-card [title]="title"></app-card>
+
+    <select class="select-city" name="form-postos" id="cidade">
+        <option *ngFor="let city of listCities; let i = index" value="">{{ listCities[i] }}</option>
+    </select>
     
     <div class="posts-list">
         <ul>
