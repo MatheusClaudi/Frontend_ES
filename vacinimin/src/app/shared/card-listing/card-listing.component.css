@@ -1,0 +1,120 @@
+@media screen and (max-width: 700px) {
+
+    .title-card-listing{
+        position: absolute;
+        width: 105px;
+        height: 26px;
+
+        font-family: Baskervville;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+
+        color: #1E1E1E;
+    }
+
+    .subtitle{
+        position: absolute;
+        width: 190px;
+        height: 23px;
+        left: 19px;
+        top: 51px;
+        font-weight: 300;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+
+        color: #585858;
+    }
+
+    .withImage .info2{
+        font-size: 14px;
+    }
+
+    .info1{
+        position: absolute;
+        width: 50px;
+        height: 40px;
+        left: 80%;
+        top: 14px;        
+    }
+    
+    .marker{
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        left: 19px;
+        top: 24.95px;
+        
+        background: #1E1E1E;
+        transform: rotate(-45deg);
+    }
+    
+    .info2{
+        position: absolute;
+        width: 74px;
+        height: 16px;
+        left: 73%;
+        top: 56px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        
+        color: #585858;
+    }
+
+    .info1-status{
+        font-family: Baskervville;
+        position: absolute;
+        right: 5%;
+        top: 15px;
+        font-size: 18px;
+    }
+
+    .card-content{
+        position: relative;
+        bottom: 0%;
+        min-width: 10%;
+        height: 91px;
+        padding-left: 0%;
+
+        background: #FFFFFF;
+        border: 1px solid #555555;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+
+    p.title-card-listing{
+        position: absolute;
+        width: 20%;
+        height: 26px;
+        left: 41px;
+        top: 15px;
+
+        font-family: Baskervville;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .Pendente{
+        color: #03A9F4;
+    }
+
+    .Cancelado{
+        color: #FF1744;
+    }
+
+    .Cumprida{
+        color: #00C853;
+    }
+
+}

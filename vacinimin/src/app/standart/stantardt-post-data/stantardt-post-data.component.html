@@ -1,0 +1,25 @@
+<div class="content">
+    
+    <app-lateral-bar class="lateral-bar"></app-lateral-bar>        
+    
+    <div class="vertical">
+        <app-topbar class="top-bar"></app-topbar>
+    </div>
+
+    <app-card [title]="title"></app-card>
+
+    <div class="post-data">
+        <p>Nome: <span>{{posto.nome}}</span></p>
+        <p>Rua: <span>{{posto.rua}}</span></p>
+        <p>Bairro: <span>{{posto.bairro}}</span></p>
+        <p>Cidade: <span>{{posto.cidade}}</span></p>
+        <p>cep: <span>{{posto.cep}}</span></p>
+        <p>numero: <span>{{posto.numero}}</span></p>
+        <p>Horário: <span>{{posto.horario}}</span></p>
+    </div>
+
+    
+</div>
+
+<router-outlet name="standart"></router-outlet>
+
