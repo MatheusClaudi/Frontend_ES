@@ -1,0 +1,106 @@
+html, body {
+    height: 100%;
+}
+
+
+.login-container {
+    position: relative;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-rows: 45fr 55fr;
+    grid-template-columns: 0.8fr;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    max-width: 450px;
+    margin: 2em auto;
+    height: 85%;
+    min-height: 550px;
+    border: 1px solid #9C9A9A;
+    border-radius: 22px;
+}
+
+.login-container .logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container .logo img {
+    width: 100%;
+    height: 90%;
+    border: none;
+
+}
+
+.login-container .login-area {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.login-container .login-area h3 {
+    margin: 0px auto;
+    width: auto;
+    text-align: center;
+    font-family: Baskervville;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #2E2424;
+}
+
+.login-container .login-area form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 55%;
+}
+
+.login-container .login-area form label {
+    align-self: flex-start;
+    margin: 4% ;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 18px;
+    color : var(--c-gray-text);
+}
+
+.login-container .login-area form input {
+    border: 1px solid #252525;
+    border-radius: 10px;
+    height: 25%;
+    width: 80%;
+}
+
+.login-container .login-area #login-button {
+    height: 12%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 1.5em;
+}
+
+.login-container .login-area #login-button button {
+    width: 9em;
+    height: 100%;
+    border-radius: 18px;
+    border: 1px solid #252525;
+    font-style: normal;
+    font-weight: normal;
+    font-family: var(--primary-font);
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--c-black-text);
+    background: #FFFFFF;
+}

@@ -1,3 +1,4 @@
+import { ClientScheduleComponent } from './client-schedule/client-schedule.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,11 +10,16 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     StandartComponent,
+    ClientScheduleComponent
+
   ],
   imports: [
     CommonModule,
     StandartRoutingModule, 
     SharedModule
+  ],
+  exports : [
+    ClientScheduleComponent
   ]
 })
 export class StandartModule { }

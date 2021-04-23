@@ -14,17 +14,18 @@ import { CoreModule } from './core/core.module';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { UnloggedModule } from './unlogged/unlogged.module';
+import { ClientScheduleComponent } from './standart/client-schedule/client-schedule.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-
     AdminModule,
     GpvModule,
     StandartModule,

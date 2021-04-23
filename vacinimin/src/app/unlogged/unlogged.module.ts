@@ -1,3 +1,4 @@
+import { StandartModule } from './../standart/standart.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -15,7 +16,8 @@ import { UnloggedComponent } from './unlogged/unlogged.component';
   imports: [
     CommonModule,
     UnloggedRoutingModule,
-    SharedModule
+    SharedModule,
+    StandartModule
   ]
 })
 export class UnloggedModule { }
