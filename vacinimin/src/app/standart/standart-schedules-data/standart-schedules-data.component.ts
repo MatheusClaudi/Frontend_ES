@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./standart-schedules-data.component.css']
 })
 export class StandartSchedulesDataComponent implements OnInit {
-
-  title: string = "Agendamento:"
+  
+  public showPopUp = false;
+  public  title: string = "Agendamento:"
 
   schedule = {
       "posto": "Campestre",
@@ -15,7 +16,14 @@ export class StandartSchedulesDataComponent implements OnInit {
       "data": "2029-08-02",
       "horario": "11:00 - 12:00",
       "nDose": "1",
-      "dataAbertura": "18-11-2025"
+      "dataAbertura": "18-11-2025",
+      "status": true, //indica se o agendamento está ativo ou não 
+      "time": "14:45"
+  }
+
+
+  onClickRegistro(){
+    this.showPopUp = !this.showPopUp;
   }
 
   constructor() { }

@@ -8,6 +8,19 @@
 
     <app-card [title]="title"></app-card>
 
+    <button (click)="onClickRegistro()" class="btn btn-name btn-top" *ngIf="schedule.status">
+        <img class="btn-icon" src="../../../assets/icons/registro.svg" alt="">
+        Registro
+    </button>
+
+    <div *ngIf="showPopUp" class="pop-up">
+        <h1>Registro de vacinação:</h1>
+        <p>Hora da vacinação:</p>
+        <div class="info">
+            <p>{{ schedule.time }}</p>
+        </div>
+    </div>
+
     <div class="data-list">
 
         <div class="info-schedule">
@@ -38,6 +51,18 @@
         <div class="info-schedule">
             <label class="label-input" for="">Nº dose:</label>
             <input class="field-content" type="date" value={{schedule.dataAbertura}}>
+        </div>
+
+        <div class="botton">
+            <button class="btn btn-name">
+                <img class="btn-icon" src="../../../assets/icons/check.svg" alt="">
+                Salvar
+            </button>
+    
+            <button class="btn btn-name btn2">
+                <img class="btn-icon" src="../../../assets/icons/cancel.svg" alt="">
+                Cancelar
+            </button>
         </div>
 
     </div>

@@ -8,15 +8,20 @@
 
     <app-card [title]="title"></app-card>
 
+    <button class="btn btn-name btn-top">
+        <img class="btn-icon" src="../../../assets/icons/plus.svg" alt="">
+        Criar
+    </button>
+
     <div class="card-list">
         <ul>
             <li class="card" *ngFor="let post of listSchedules; let i = index">
                 <app-card-listing
-                    [title]="listSchedules[i].nomePosto"
+                    [title]="listSchedules[i].nome"
                     [subtitle]="listSchedules[i].data"
                     [subtitle2]="listSchedules[i].hora"
                     [info1]="listSchedules[i].status"
-                    [info2]="listSchedules[i].dose"
+                    [info2]="listSchedules[i].cpf"
                     [imagem]="false"
                 >
                 </app-card-listing>

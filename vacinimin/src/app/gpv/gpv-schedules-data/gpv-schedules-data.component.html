@@ -1,0 +1,134 @@
+<div class="content">
+
+    <app-lateral-bar class="lateral-bar"></app-lateral-bar>
+
+    <div class="vertical">
+        <app-topbar class="top-bar"></app-topbar>
+    </div>
+
+    <app-card [title]="title"></app-card>
+
+    <div *ngIf="showPopUp" class="pop-up">
+        <h1>Aviso:</h1>
+        <div class="info">
+            <p>A vacina associada à este
+                agendamento possui precisa de mais de uma dose, gostaria de agendar a próxima dose agora?</p>
+        </div>
+
+        <div class="botton-btns">
+            <div class="btn">
+                <img class="btn-icon" src="../../../assets/icons/check.svg">
+
+                <div class="btn-name">
+                    Sim
+                </div>
+            </div>
+
+            <div class="btn btn-medium">
+                <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+
+                <div class="btn-name">
+                    Não
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="data-list">
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Nome ativo:</label>
+            <input class="field-content" type="text" value={{schedule.nome}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">CPF ativo:</label>
+            <input class="field-content" type="text" value={{schedule.cpf}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Data:</label>
+            <input class="field-content" type="date" value={{schedule.data}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Horário slot:</label>
+            <input class="field-content" type="text" value={{schedule.hora}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Nº dose:</label>
+            <input class="field-content" type="text" value={{schedule.dose}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Data abertura:</label>
+            <input class="field-content" type="date" value={{schedule.dataAbertura}}>
+        </div>
+
+        <div class="info-schedule">
+            <label class="label-input" for="">Lote de vacina:</label>
+            <input class="field-content" type="text" value={{schedule.loteVacina}}>
+        </div>
+
+        <div class="section status">
+
+            <div class="section">
+
+                <div class="check-radio-tittle">
+                    Status:
+                </div>
+
+                <div class="check-radio">
+                    <p>
+                        <input formControlName="statusAgendamento" [value]="schedule.status" type="radio" id="ativo"
+                            name="statusAgendamento">
+                        <label class="check-radio-option-name" for="ativo">Ativo</label>
+                    </p>
+                    <p>
+                        <input formControlName="statusAgendamento" value="cancelado" type="radio" id="cancelado"
+                            name="statusAgendamento">
+                        <label class="check-radio-option-name" for="cancelado">Cancelado</label>
+                    </p>
+                    <p>
+                        <input formControlName="statusAgendamento" value="cumprido" type="radio" id="cumprido"
+                            name="statusAgendamento">
+                        <label class="check-radio-option-name" for="cumprido">Cumprido</label>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="info-schedule">
+                <label class="label-input" for="">Comentário:</label>
+                <div class="comentario">
+                    <p>{{ schedule.comentario }}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="botton-page-btns">
+            <div class="btn" (click)="onClickEfetivar()">
+                <img class="btn-icon" src="../../../assets/icons/check.svg">
+
+                <div class="btn-name">
+                    Efetivar agendamento
+                </div>
+            </div>
+
+            <div class="btn">
+                <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+
+                <div class="btn-name">
+                    Cancelar agendamento
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <router-outlet name="standart"></router-outlet>

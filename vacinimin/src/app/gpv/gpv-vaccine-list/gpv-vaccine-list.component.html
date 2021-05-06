@@ -1,0 +1,37 @@
+<div class="content">
+    
+    <app-lateral-bar class="lateral-bar"></app-lateral-bar>        
+    
+    <div class="vertical">
+        <app-topbar class="top-bar"></app-topbar>
+    </div>
+
+    <app-card [title]="title"></app-card>
+
+    <button class="btn btn-name btn-top">
+        <img class="btn-icon" src="../../../assets/icons/plus.svg" alt="">
+        Criar
+    </button>
+
+    <div class="card-list">
+        <ul>
+            <li class="card" *ngFor="let post of vaccinesList; let i = index">
+                <app-card-listing
+                    [title]="vaccinesList[i].nome"
+                    [subtitle]="getValidade(i)"
+                    [subtitle2]=""
+                    [info1]="getNumDose(i)"
+                    [info2]="getDose(i)"
+                    [imagem]="false"
+                >
+                </app-card-listing>
+            </li>
+        </ul>
+
+    </div>
+
+    
+</div>
+
+<router-outlet name="standart"></router-outlet>
+

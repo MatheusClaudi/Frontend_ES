@@ -106,7 +106,7 @@ div.tittle {
     }
 
     .card-options-list {
-        z-index: 1;
+        z-index: 10;
         margin-top: max(9vh, 64px);
         position: absolute;
         min-width: 120px;

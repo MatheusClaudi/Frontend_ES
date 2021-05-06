@@ -1,0 +1,17 @@
+.info-vaccine{
+    display: grid;
+    padding-left: 13px;
+    padding-top: 10px;
+}
+
+.botton{
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    margin-top: 10px;
+    justify-content: center;
+}

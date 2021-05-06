@@ -15,7 +15,7 @@
 
 <div class="card-content" *ngIf=!imagem>
 
-    <div class="top-content {{ info1 }}">
+    <div class="top-content {{ info1 }}" [ngClass]="{'info-blue': subtitle2 != ''}">
         <p class="title-card-listing">{{ title }}</p>
         <img class="marker" src="../../../assets/icons/Marker.svg">
         <p class="info1-status">{{ info1 }}</p>

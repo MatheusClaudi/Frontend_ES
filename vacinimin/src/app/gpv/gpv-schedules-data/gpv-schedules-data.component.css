@@ -1,0 +1,89 @@
+.status{
+    margin-top: 15px;
+}
+
+.comentario{
+    border: 1px solid #252525;
+    box-sizing: border-box;
+    border-radius: 10px;
+    min-width: 214px;
+    height: 108px;
+    padding: 12px;
+    margin-bottom: 13px;
+}
+
+.comentario p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #262626;
+}
+
+.pop-up{
+    position: absolute;
+    min-width: 80%;
+    height: 39%;
+    left: 38px;
+    bottom: -19%;
+    font-family: Baskervville;
+    
+    background: #FFF;
+    border: 1px solid #383838;
+    box-sizing: border-box;
+    border-radius: 25px;
+    z-index: 1;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.pop-up h1{
+    position: absolute;
+    font-family: Baskervville;
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 17px;
+
+    color: #1D1D1D;   
+}
+
+.info{
+    color: #1D1D1D;
+    position: absolute;
+    width: 267px;
+    height: 92px;
+    top: 66px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.botton-btns {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+
+.pop-up .botton-btns{
+    bottom: 1%;
+    
+}
+
+.btn-page-btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+
+.botton-btns .btn {
+    margin-left: 20px;
+}
+

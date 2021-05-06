@@ -23,8 +23,8 @@ const routes: Routes = [
   { 
     path: 'gpv', 
     loadChildren: () => GpvModule,
-    canActivate: [AuthGuard],
-    data: { roles: [Role.GPV] }
+    // canActivate: [AuthGuard],
+    // data: { roles: [Role.GPV] }
   },
   { path: '', loadChildren: () => UnloggedModule  }
 ];

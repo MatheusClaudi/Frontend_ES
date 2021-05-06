@@ -1,0 +1,71 @@
+<div class="content">
+    
+    <app-lateral-bar class="lateral-bar"></app-lateral-bar>        
+    
+    <div class="vertical">
+        <app-topbar class="top-bar"></app-topbar>
+    </div>
+
+    <app-card [title]="title"></app-card>
+
+    <div class="data-list">
+
+        <div class="info-vaccine">
+            <label class="label-input" for="">Lote vacina:</label>
+            <input class="field-content" type="text"value={{vaccine.nome}}>
+        </div>
+
+        <div class="info-vaccine">
+            <label class="label-input" for="">Criador:</label>
+            <input class="field-content" type="text"value={{vaccine.criador}}>
+        </div>
+
+        <div class="info-vaccine">
+            <label class="label-input" for="">Validade:</label>
+            <input class="field-content" type="date" value={{vaccine.validade}}>
+        </div>
+
+        <div class="info-vaccine">
+            <label class="label-input" for="">Nº doses:</label>
+            <input class="field-content" type="text" value={{vaccine.dose}}>
+        </div>
+
+        <div class="info-vaccine">
+            <label class="label-input" for="">Quantidade total:</label>
+            <input class="field-content" type="text" value={{vaccine.total}}>
+        </div>
+
+        <div class="info-vaccine">
+            <label class="label-input" for="">Quantidade usada:</label>
+            <input class="field-content" type="text" value={{vaccine.usada}}>
+        </div>
+
+        <div class="info-vaccine">
+            <label class="label-input" for="">Quantidade disponível</label>
+            <input class="field-content" type="text" value={{vaccine.disponivel}}>
+        </div>
+
+        <div class="info-vaccine">
+            <label class="label-input" for="">Quantidade liberada:</label>
+            <input class="field-content" type="text" value={{vaccine.liberada}}>
+        </div>
+
+        <div class="botton">
+            <button class="btn btn-name">
+                <img class="btn-icon" src="../../../assets/icons/check.svg" alt="">
+                Salvar
+            </button>
+    
+            <button class="btn btn-name btn2">
+                <img class="btn-icon" src="../../../assets/icons/cancel.svg" alt="">
+                Cancelar
+            </button>
+        </div>
+
+    </div>
+
+    
+</div>
+
+<router-outlet name="standart"></router-outlet>
+
