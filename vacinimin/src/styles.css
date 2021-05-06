@@ -118,8 +118,7 @@ body {
     border: 1px solid var(--c-white-primary);
     box-sizing: border-box;
     border-radius: 20px;
-    padding-top: 7px;
-    padding-left: 18px;
+    align-items: center;
     outline-style: none;
     justify-content: center;
 }
