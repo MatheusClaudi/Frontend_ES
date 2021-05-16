@@ -1,0 +1,113 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Listagem de usuários
+            </div>
+
+            <div class="top-btns">
+                <div (click)="createUser()" class="btn add">
+                    <img class="btn-icon add-icon" src="../../../assets/icons/plus.svg">
+
+                    <div class="btn-name">
+                        Criar
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="outer">
+          <form [formGroup]="filterForm">
+            <table class="table">
+              <thead>
+                <tr class="columns-names">
+                  <th class="alert-box">ID</th>
+                  <th class="alert-box">Nome</th>
+                  <th class="alert-box">Email</th>
+                  <th class="alert-box">CPF</th>
+                  <th class="alert-box">TipoUsuário</th>
+                  <th class="alert-box">Opções</th>
+                </tr>
+                <tr class="columns-names">
+
+                  <th class="alert-box">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" id="FSnome" formControlName="name" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" id="FSemail" formControlName="email" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" id="FScpf" formControlName="cpf" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <select id="FSUsuario" formControlName="role">
+                      <option value="">Nenhum</option>
+                      <option value="client">Standart</option>
+                      <option value="manager">Gpv</option>
+                      <option value="admin">Admin</option>
+                    </select>
+                  </th>
+
+                  <th class="alert-box">
+                    <div (click)="search()" class="btn blank-btn">
+                      <img class="btn-icon" src="../../../assets/icons/search.svg">
+  
+                      <div class="btn-name blank-btn-name">
+                          Aplicar
+                      </div>
+                  </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let user of users; let i = index">
+                  <tr>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ user.id }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ user.name }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ user.email }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ user.cpf }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ user.role }}</span>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <div class="table-row  icons-table-row" >
+                        <button (click)="editUser(user)" class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/pen.svg">
+                        </button>
+                        <button (click)="removeUser(user.id)" class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/trash.svg">
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+              </tbody>
+            </table>
+          </form>
+          </div>
+        
+          <app-pagination [data]="{numberOfPages: numberOfPages, currentPage: 1}" (newPageSelectedEvent)="test($event)"></app-pagination>
+
+    </div>
+</div>

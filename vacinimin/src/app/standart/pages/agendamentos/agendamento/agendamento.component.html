@@ -1,0 +1,89 @@
+<div class="content">
+    <div class="card">        
+        <div class="page-tittle">
+            Controle slots
+        </div>
+        <div class="date-picker">
+            <app-date-picker (newDateSelected)="dateSelected($event)"></app-date-picker>
+        </div>
+        <div *ngIf="postoDateStr">
+            <div class="top-options">
+                <div class="page-tittle">
+                    Slots de horário ({{ postoDateStr }})
+                </div>
+    
+                <div class="top-btns">
+    
+                    <div *ngIf="showCard" class="sub-card row-300">
+                        <div>
+                            <div class="section-name">
+                                Agendamento:
+                            </div>
+
+                            <div *ngIf="slotLotado" class="error-message"> *Slot lotado</div>
+                            <div *ngIf="userAgendamentoAtivo" class="error-message"> *Você já possui agendamento em aberto</div>
+                            <div *ngIf="userVacinado" class="error-message"> *Você já tomou suas duas doses</div>
+
+                            <div *ngIf="enabled" class="bottom-options">
+                                <div (click)="agendar()" class="btn add dad">
+                                    <img class="btn-icon" src="../../../assets/icons/calendar.svg">
+                
+                                    <div class="btn-name">
+                                        Agendar
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bottom-options">
+                                <div (click)="closeCard()" class="btn add">
+                                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                
+                                    <div class="btn-name">
+                                        Cancelar
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Slots cadastrados:
+                        </div>
+                        <div class="section-content">
+    
+                            <div class="slot-box" *ngFor="let slot of slots">
+                                
+                                <div class="hora">
+                                    <div class="pointer" (click)= "goToSlotContent(slot)">
+                                        {{ formatDate(slot.initialDate) }} - {{ formatDate(slot.finalDate)}}
+                                    </div>
+                                </div>
+    
+                                <div class="quantidade">
+                                    Restrição: 
+                                </div>
+                                <div *ngIf="slot.priority != null" class="quantidade">
+                                    {{ slot.priority }}
+                                </div>
+                                <div *ngIf="slot.priority == null" class="quantidade">
+                                    nenhuma
+                                </div>
+                            </div>
+                            
+    
+                        </div>    
+                    </div>
+                </div>
+    
+            </div>
+    </div>
+</div>
+

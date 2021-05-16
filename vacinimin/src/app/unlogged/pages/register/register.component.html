@@ -1,0 +1,65 @@
+<div class="content">
+    <div class="card">
+       
+        <div class="card-name">
+            Cadastro
+        </div>
+
+        <div *ngIf="showSucessMensage" class="sub-card">
+            <p class="p">
+                Cadastro concluído
+                 com sucesso !
+            </p>
+
+            <div (click)="goToLogin()" class="submit-btn inside">
+                <p>
+                    Log-in
+                </p>
+            </div>
+        </div>
+
+        <form [formGroup]="form">
+        <div class="form-content">
+            <div class="field">
+                <div class="field-tittle"> Nome: </div>
+                <input formControlName="name" class="field-box tiny-field">
+                <div *ngIf="hasErrorWith(form,'name', 'required')" class="error-message"> *Campo necessário</div>
+            </div>
+
+            <div class="field">
+                <div class="field-tittle"> Cpf: </div>
+                <input formControlName="cpf" class="field-box tiny-field">
+                <div *ngIf="hasErrorWith(form,'cpf', 'required')" class="error-message"> *Campo necessário</div>
+            </div>    
+
+            <div class="field">
+                <div class="field-tittle"> Email: </div>
+                <input formControlName="email" class="field-box tiny-field">
+                <div *ngIf="hasErrorWith(form,'email', 'required')" class="error-message"> *Campo necessário</div>
+
+            </div>    
+
+            <div class="field">
+                <div class="field-tittle"> Senha: </div>
+                <input formControlName="password" class="field-box tiny-field">
+                <div *ngIf="hasErrorWith(form,'password', 'required')" class="error-message"> *Campo necessário</div>
+            </div>    
+
+            <div class="field">
+                <div class="field-tittle"> Confirme a senha: </div>
+                <input formControlName="passwordConfirm" class="field-box tiny-field">
+                <div *ngIf="hasErrorWith(form,'passwordConfirm', 'required')" class="error-message"> *Campo necessário</div>
+                <div *ngIf="requestError" class="error-message"> *Erro na solicitação, confira os dados acima</div>
+                <div *ngIf="passwordError" class="error-message"> *Senhas devem ser iguais</div>
+                <div *ngIf="dadosErro" class="error-message"> *Todos os campos devem ser preenchidos</div>
+            </div>    
+        </div>
+
+        <div (click)="onSubmit()" class="submit-btn">
+            <p>
+                Cadastrar
+            </p>
+        </div>
+        </form>
+    </div>
+</div>

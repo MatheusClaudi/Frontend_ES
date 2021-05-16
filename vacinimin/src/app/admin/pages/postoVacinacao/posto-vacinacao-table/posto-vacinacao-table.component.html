@@ -1,0 +1,100 @@
+
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Postos de vacinação
+            </div>
+
+            <div class="top-btns">
+                <div (click)="createPostoVacinacao()" class="btn add">
+                    <img class="btn-icon add-icon" src="../../../assets/icons/plus.svg">
+
+                    <div class="btn-name">
+                        Criar
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="outer">
+          <form [formGroup]="filterForm">
+            <table class="table">
+              <thead>
+                <tr class="columns-names">
+                  <th class="alert-box">ID</th>
+                  <th class="alert-box">Nome</th>
+                  <th class="alert-box">CEP</th>
+                  <th class="alert-box">Cidade</th>
+                  <th class="alert-box">Opções</th>
+                </tr>
+                <tr class="columns-names">
+
+                  <th class="alert-box">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" formControlName="name" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text"  formControlName="zipCode" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text"  formControlName="city" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <div (click)="search()" class="btn blank-btn">
+                      <img class="btn-icon" src="../../../assets/icons/search.svg">
+  
+                      <div class="btn-name blank-btn-name">
+                          Aplicar
+                      </div>
+                  </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let postoVacinacao of postosVacinacao; let i = index">
+                  <tr>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ postoVacinacao.id }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ postoVacinacao.name }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ postoVacinacao.zipCode }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ postoVacinacao.city }}</span>
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="table-row  icons-table-row" >
+
+                        <button (click)="editPostoVacinacao(postoVacinacao)" class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/pen.svg">
+                        </button>
+                        <button class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/trash.svg">
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+              </tbody>
+            </table>
+          </form>
+          </div>
+        
+          <app-pagination [data]="{numberOfPages: numberOfPages, currentPage: 1}" (newPageSelectedEvent)="test($event)"></app-pagination>
+
+    </div>
+</div>

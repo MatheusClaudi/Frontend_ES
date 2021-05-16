@@ -10,8 +10,8 @@
 .vertical {
     display: flex;
     flex-direction: column;
-    width: calc(100% - max(16%, 235px));
-    max-width: calc(100% - max(16%, 235px));
+    width: 100%;
+    max-width: 100%;
 }
 
 

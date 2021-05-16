@@ -1,0 +1,49 @@
+<div class="content">
+    <div class="card">
+        
+        <div class="card-content">
+
+            <div class="row">
+                <div class="page-tittle">
+                    Postos de vacinação
+                </div>
+    
+                <div (click)="create()" class="btn plus-btn" >
+                    <div class="btn-name">
+                        Criar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../../../assets/icons/plus1.svg">
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class = "column">
+                    
+                 <div class="list-items">
+                        <div *ngFor="let lote of lotes" class="list-item">
+                            <div>
+                                <div class="row a">
+                                    <div (click)="goToLote(lote)" class="name"> {{lote.name}}</div>
+                                </div>
+                                <div  class="row b">
+                                    <div class="sub"> Quantidade restante:</div>
+                                    <div class="number"> {{lote.quantity}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                    <app-pagination [data]="{numberOfPages: numberOfPages, currentPage: page}" (newPageSelectedEvent)="test($event)"></app-pagination>
+
+                    
+
+    
+                </div>  
+            </div>
+        </div> 
+
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="content">
+    <div class="card">
+        
+        <div class="card-content">
+
+            <div class="page-tittle">
+                Postos de vacinação
+            </div>
+
+            <div *ngIf="showCriation" class="sub-card row-300">
+                <div>
+                    <div class="section-name">
+                        Confimar agendamento:
+                    </div>
+
+                    <form [formGroup]="confirmForm">
+
+                        <div class="section">
+                            <div class="section-name">
+                                lote utilizado:
+                            </div>
+        
+                            <div class="section-content">
+                                <div class="field">
+                                    <div class="field-tittle"> ID lote vacina: </div>
+                                    <input formControlName="idLote" class="field-box medium-field">
+                                </div>
+                            </div>  
+
+                            <div *ngIf="jaConfirmado" class="error-message"> *Agendamento já confirmado</div>
+                            <div *ngIf="erroConfirmacao" class="error-message"> *Erro na solicitação, confira os dados</div>
+
+                            <div class="btns-card">
+                                <div (click)="confirma()" class="btn save">
+                                    <div class="btn-name">
+                                        Salvar
+                                    </div>
+                        
+                                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                                </div>
+                    
+                                <div class="btn cancel" (click)="hide()">
+                                    <div class="btn-name">
+                                        Cancelar
+                                    </div>
+                                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                                </div>
+                            </div>                   
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+    
+            <div class="columns">
+                <div class = "column">
+
+                <form [formGroup]="filterForm">
+                    <div class="section">
+                    
+                        <div class="section-content line">
+                            <div class="field">
+                                <div class="field-tittle"> Cpf: </div>
+                                <input formControlName="cpf" class="field-box search">
+                            </div>
+                
+                
+                            <div (click)="search()" class="btn search-btn" >
+                                <div class="btn-name">
+                                    Procurar
+                                </div>
+                    
+                                <img class="btn-icon" src="../../../../../assets/icons/search2.svg">
+                            </div>
+                        </div>    
+                    </div>
+                </form>
+                    
+                 <div class="list-items">
+                        <div *ngFor="let user of users" class="list-item">
+                            <div>
+                                <div (click)="show(user)" class="row a">
+                                    <div class="name"> {{user.name}}</div>
+                                </div>
+                                <div  class="row b">
+                                    <div class="sub"> {{user.cpf}}</div>
+                                    <div *ngIf="getDoseAgendamentoAberto(user) != 0" class="number"> {{getDoseAgendamentoAberto(user)}}º dose</div>
+                                    <div *ngIf="getDoseAgendamentoAberto(user) == 0" class="number"> Confirmado </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+
+                    <app-pagination [data]="{numberOfPages: numberOfPages, currentPage: currentPage}" (newPageSelectedEvent)="test($event)"></app-pagination>
+
+                    
+
+    
+                </div>  
+            </div>
+        </div> 
+
+    </div>
+</div>

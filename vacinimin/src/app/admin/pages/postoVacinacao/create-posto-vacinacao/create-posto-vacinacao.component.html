@@ -1,0 +1,105 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Posto de Vacinacao
+            </div>            
+        </div>
+        
+        <form [formGroup]="postoVacinacaoDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">                    
+                            <div class="field">
+                                <div class="field-tittle"> Nome: </div>
+                                <input formControlName="name" class="field-box">
+                                <div *ngFor="let error of postoVacinacaoFormErrors.errorMessages.name">
+                                    <div *ngIf="hasErrorWith(postoVacinacaoDataForm,'name', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Endereço:
+                        </div>
+                        <div class="section-content">
+
+                            <div class="field">
+                                <div class="field-tittle"> Estado: </div>
+                                <input formControlName="state" class="field-box">
+                                <div *ngFor="let error of postoVacinacaoFormErrors.errorMessages.state">
+                                    <div *ngIf="hasErrorWith(postoVacinacaoDataForm,'state', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Cidade: </div>
+                                <input formControlName="city" class="field-box">
+                                <div *ngFor="let error of postoVacinacaoFormErrors.errorMessages.city">
+                                    <div *ngIf="hasErrorWith(postoVacinacaoDataForm,'city', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Bairro: </div>
+                                <input formControlName="district" class="field-box">
+                                <div *ngFor="let error of postoVacinacaoFormErrors.errorMessages.district">
+                                    <div *ngIf="hasErrorWith(postoVacinacaoDataForm,'district', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Rua: </div>
+                                <input formControlName="address" class="field-box large-field">
+                                <div *ngFor="let error of postoVacinacaoFormErrors.errorMessages.address">
+                                    <div *ngIf="hasErrorWith(postoVacinacaoDataForm,'address', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Cep: </div>
+                                <input formControlName="zipCode" class="field-box">
+                                <div *ngFor="let error of postoVacinacaoFormErrors.errorMessages.zipCode">
+                                    <div *ngIf="hasErrorWith(postoVacinacaoDataForm,'zipCode', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div *ngIf="errorPedido" class="error-message"> *Pedido negado, confira as informações</div>
+                            <div *ngIf="errorBranco" class="error-message"> *Existem campos em branco</div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bottom-options">
+                <div class="btn save" (click)="submitForm()">
+                    <div class="btn-name">
+                        Salvar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                </div>
+    
+                <div class="btn cancel" (click)="cancelFormSubmition()">
+                    <div class="btn-name">
+                        Cancelar
+                    </div>
+                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                </div>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
+

@@ -1,0 +1,156 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Dados de usuários
+            </div>
+        </div>
+        
+        <form [formGroup]="userDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+    
+                            <div class="field">
+                                <div class="field-tittle"> Nome: </div>
+                                <input formControlName="name" class="field-box">
+                                <div *ngFor="let error of userFormErrors.errorMessages.name">
+                                    <div *ngIf="hasErrorWith(userDataForm,'name', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Email: </div>
+                                <input formControlName="email" class="field-box large-field">
+                                <div *ngFor="let error of userFormErrors.errorMessages.email">
+                                    <div *ngIf="hasErrorWith(userDataForm,'email', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="field">
+                                <div class="field-tittle"> Cpf: </div>
+                                <input formControlName="cpf" class="field-box">
+                                <div *ngFor="let error of userFormErrors.errorMessages.cpf">
+                                    <div *ngIf="hasErrorWith(userDataForm,'cpf', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Senha: </div>
+                                <input formControlName="password" class="field-box">
+                                <div *ngFor="let error of userFormErrors.errorMessages.password">
+                                    <div *ngIf="hasErrorWith(userDataForm,'password', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Confirmar senha: </div>
+                                <input formControlName="passwordConfirm" class="field-box">
+                                <div *ngFor="let error of userFormErrors.errorMessages.passwordConfirm">
+                                    <div *ngIf="hasErrorWith(userDataForm,'passwordConfirm', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+
+                            
+
+                        </div>    
+                    </div>
+    
+                </div>
+    
+                <div class = "column">
+    
+                    <div class="section">
+                
+                        <div class="check-radio-tittle">
+                            Permissões:
+                        </div>
+            
+                        <div class="check-radio">
+                            <p>
+                                <input formControlName="permissaoUsuario" value="Standart" type="radio" id="cliente" name="permissaoUsuario">
+                                <label class="check-radio-option-name" for="cliente">Cliente</label>
+                            </p>
+                            <p>
+                                <input formControlName="permissaoUsuario" value="Gpv" type="radio" id="gpv" name="permissaoUsuario">
+                                <label class="check-radio-option-name" for="gpv">Gpv</label>
+                            </p>
+
+                            <div *ngFor="let error of userFormErrors.errorMessages.permissaoUsuario">
+                                <div *ngIf="hasErrorWith(userDataForm,'permissaoUsuario', error.type)" class="error-message"> {{ error.message }}</div>
+                            </div>
+
+                        </div>
+
+                        <div *ngIf="errorSenha" class="error-message"> *Senhas devem ser iguais</div>
+                            <div *ngIf="errorPedido" class="error-message"> *Pedido negado, confira as informações</div>
+                            <div *ngIf="errorBranco || errorPosto" class="error-message"> *Existem campos em branco</div>
+                    </div>
+                    
+                    <form *ngIf="getFieldValue(userDataForm,'permissaoUsuario') == 'Gpv'" [formGroup]="gpvDataForm">
+                        <div class="section">
+                            <div class="section-name">
+                                Dados posto:
+                            </div>
+        
+                            <div class="section-content">
+                                <div class="field">
+                                    <div class="field-tittle"> Id: </div>
+                                    <input formControlName="idPosto" class="field-box tiny-field">
+                                    <div *ngFor="let error of userFormErrors.errorMessages.postoAssociado">
+                                        <div *ngIf="hasErrorWith(gpvDataForm,'idPosto', error.type)" class="error-message"> {{ error.message }}</div>
+                                    </div>
+                                </div>
+        
+                                <!--div class="field">
+                                    <div class="field-tittle"> Nome posto: </div>
+                                    <input formControlName="nomePosto" class="field-box">
+                                </div-->
+        
+                                <!--div class="row">
+                                    <select class="btn-selector btn-selector-name" id="FSUsuario" name="filterTipoUser">
+                                        <option class="btn-selector-name" value="australia">Seleção de posto</option>
+                                        <option class="btn-selector-name" value="australia">Australia</option>
+                                        <option class="btn-selector-name" value="canada">Canada</option>
+                                        <option class="btn-selector-name" value="usa">USA</option>
+                                    </select>       
+                                    <div class="btn-selector-icon"></div>
+                                </div-->
+                            </div>    
+                        </div>
+                    </form>   
+                </div>
+            </div>
+    
+            <div class="bottom-options">
+                <div class="btn save" (click)="submitForm()">
+                    <div class="btn-name">
+                        Salvar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                </div>
+    
+                <div class="btn cancel" (click)="cancelFormSubmition()">
+                    <div class="btn-name">
+                        Cancelar
+                    </div>
+                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                </div>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
+

@@ -1,4 +1,6 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/core/_services/authentication/authentication.service';
 import { ScreenDimensionService } from 'src/app/core/_services/screen/screen-dimension.service';
 
 @Component({
@@ -8,10 +10,12 @@ import { ScreenDimensionService } from 'src/app/core/_services/screen/screen-dim
 })
 export class TopbarComponent implements OnInit {
 
+  @Input() options;
+
   public showOption = false;
   public tinyScreen = false;
 
-  constructor(private _sd_service: ScreenDimensionService) { }
+  constructor(private _sd_service: ScreenDimensionService, private router: Router, private _as: AuthenticationService) { }
 
   ngOnInit(): void {
     this.checkTinyScreen();
@@ -35,6 +39,13 @@ export class TopbarComponent implements OnInit {
 
   onClickMenu(){
     this.showOption = !this.showOption;
+  }
+
+  goToPage(option) {
+    if (option.str == 'Log-out') {
+      this._as.logout();
+    }
+    this.router.navigate([option.path]);  
   }
 
 }

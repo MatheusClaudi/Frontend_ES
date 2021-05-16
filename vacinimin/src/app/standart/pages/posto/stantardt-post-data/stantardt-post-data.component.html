@@ -1,0 +1,25 @@
+
+
+<app-card title="Dados do posto"></app-card>
+
+<div class="post-data">
+    <p>Nome: <span>{{posto.name}}</span></p>
+    <p>Rua: <span>{{posto.address}}</span></p>
+    <p>Bairro: <span>{{posto.district}}</span></p>
+    <p>Cidade: <span>{{posto.city}}</span></p>
+    <p>Cep: <span>{{posto.zipCode}}</span></p>
+
+    <div >
+        <div (click)="goToHorarios()" class="btn add">
+            <img class="btn-icon" src="../../../assets/icons/calendar.svg">
+
+            <div class="btn-name">
+                Horários
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+
+    

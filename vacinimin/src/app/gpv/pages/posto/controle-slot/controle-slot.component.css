@@ -1,0 +1,231 @@
+.content {
+    width: 100%;
+}
+
+.card {
+    width: 96%;
+    min-height: calc(100vh - var(--height-topbar) - 31px);
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 1px solid var(--c-gray-card-border-3);
+    box-sizing: border-box;
+    border-radius: 20px;
+} 
+
+.top-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-btns {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+.top-btns .btn {
+    margin-left: 20px;
+}
+
+.page-tittle {
+    margin-top: 25px;
+    margin-left: 30px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    color: var( --c-black-text);
+}
+
+.columns {
+    display: grid;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 96%;
+    grid-template-columns: 55% 45%;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.bottom-options .cancel {
+    width: 145px;
+    margin-left: 20px;
+}
+
+.bottom-options .save {
+    width: 120px;
+}
+
+.section {
+    margin-top: 21px;
+    margin-left: 45px;
+}
+
+.section-name {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: var( --c-black-field-text-content); 
+}
+
+.section-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.btn {
+    padding-top: 7px;
+    padding-left: 18px;
+    width: 193px;
+}
+
+
+.field-box {
+    width: 145px;
+}
+
+.tiny-field {
+    width: 63px;
+}
+
+.large-field {
+    width: 253px;
+    height: 80px;
+}
+
+.medium-field {
+    width: 100x;
+}
+
+.btn-medium {
+    width: 163px;
+}
+
+.btn-selector {
+    width: 186px;
+    margin-top: 24px;
+    margin-left: 9px;
+}
+
+.slot-box {
+    border: 1px solid #555555;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.slot-box .hora {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #585858;
+}
+
+
+.slot-box .quantidade {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #585858;
+}
+
+.slot-box img {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.sub-card {
+    position: absolute;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 7px;
+    background: #FFFFFF;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    right: 60px;
+
+}
+
+.row-300 {
+    max-width: 350px;
+}
+
+.btns-card {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.btns-card .btn {
+    margin-top: 40px;
+    margin-left: 0px;
+    max-width: 150px;
+}
+
+.date-picker {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    .top-options {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bottom-options {
+        justify-content: center;
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .columns {
+    
+        grid-template-columns: none;
+    
+    }
+
+    .sub-card {
+        margin-left: 40px;
+        right: 10%;
+    }
+   
+}

@@ -1,10 +1,8 @@
 
 <div class="content">
-    
-    <app-lateral-bar class="lateral-bar"></app-lateral-bar>        
-    
+        
     <div class="vertical">
-        <app-topbar class="top-bar"></app-topbar>
+        <app-topbar [options]="topOptions" class="top-bar"></app-topbar>
         
         <router-outlet name="unlogged"></router-outlet>
     </div>

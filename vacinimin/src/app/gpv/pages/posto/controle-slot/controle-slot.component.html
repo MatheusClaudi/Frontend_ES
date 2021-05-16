@@ -1,0 +1,166 @@
+<div class="content">
+    <div class="card">
+
+        <div class="page-tittle">
+            Controle slots
+        </div>
+        <div class="date-picker">
+            <app-date-picker (newDateSelected)="dateSelected($event)"></app-date-picker>
+        </div>
+        <div *ngIf="postoDateStr">
+            <div class="top-options">
+                <div class="page-tittle">
+                    Slots de horário ({{ postoDateStr }})
+                </div>
+    
+                <div class="top-btns">
+                    <!--div (click)="removeAllSlots()" class="btn">
+                        <div class="btn-name">
+                            Remover todos
+                        </div>
+            
+                        <img class="btn-icon" src="../../../../../assets/icons/cancel.svg">
+                    </div-->
+        
+                    <div (click)="showCreate()" class="btn btn-medium">
+                        <div class="btn-name">
+                            Criar Slot
+                        </div>
+            
+                        <img class="btn-icon" src="../../../../../assets/icons/plus1.svg">
+                    </div>
+    
+                    <div *ngIf="showCriation" class="sub-card row-300">
+                        <div>
+                            <div class="section-name">
+                                Criação:
+                            </div>
+        
+                            <form [formGroup]="slotDataForm">
+                            <div class="section-content">
+                                <div class="field">
+                                    <div class="field-tittle"> Hora de início: </div>
+                                    <input formControlName="initialDate" class="field-box medium-field">
+                                    <div *ngFor="let error of slotFormErrors.errorMessages.initialDate">
+                                        <div *ngIf="hasErrorWith(slotDataForm,'initialDate', error.type)" class="error-message"> {{ error.message }}</div>
+                                    </div>
+                                </div>
+        
+                                <div class="field">
+                                    <div class="field-tittle"> Hora de fim: </div>
+                                    <input formControlName="finalDate" class="field-box medium-field">
+                                    <div *ngFor="let error of slotFormErrors.errorMessages.finalDate">
+                                        <div *ngIf="hasErrorWith(slotDataForm,'finalDate', error.type)" class="error-message"> {{ error.message }}</div>
+                                    </div>
+                                </div>
+    
+                                <div class="field">
+                                    <div class="field-tittle"> Quantidade de pessoas: </div>
+                                    <input formControlName="qtdVaccine" class="field-box medium-field">
+                                    <div *ngFor="let error of slotFormErrors.errorMessages.qtdVaccine">
+                                        <div *ngIf="hasErrorWith(slotDataForm,'qtdVaccine', error.type)" class="error-message"> {{ error.message }}</div>
+                                    </div>
+                                </div>
+    
+                                <div class="field">
+                                    <div class="field-tittle"> Descrição de prioridade: </div>
+                                    <textarea formControlName="priority" class="field-box large-field"></textarea>
+                                    <div *ngFor="let error of slotFormErrors.errorMessages.priority">
+                                        <div *ngIf="hasErrorWith(slotDataForm,'priority', error.type)" class="error-message"> {{ error.message }}</div>
+                                    </div>
+
+                                    <div *ngIf="errorBranco" class="error-message"> *Faltam campos em branco</div>
+                                    <div *ngIf="errorCriar" class="error-message"> *Erro na solicitação, confira os dados</div>
+
+                                </div>
+                            </div>   
+                            
+                            <div class="btns-card">
+                                <div (click)="create()" class="btn save">
+                                    <div class="btn-name">
+                                        Salvar
+                                    </div>
+                        
+                                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                                </div>
+                    
+                                <div class="btn cancel" (click)="cancelCreation()">
+                                    <div class="btn-name">
+                                        Cancelar
+                                    </div>
+                                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                                </div>
+                            </div>
+    
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Slots cadastrados:
+                        </div>
+                        <div class="section-content">
+    
+                            <div class="slot-box" *ngFor="let slot of slots">
+                                
+                                <div class="hora">
+                                    <div class="pointer" (click)= "goToSlotContent(slot)">
+                                        {{ formatDate(slot.initialDate) }} - {{ formatDate(slot.finalDate)}}
+                                    </div>
+    
+                                    <img (click)= "removeSlot(slot)" class="icon" src="../../../../../assets/icons/close2.svg">
+                                </div>
+    
+                                <div class="quantidade">
+                                    {{ slot.qtdVaccine }} Pessoas
+                                </div>
+                                <br/>
+                                <div class="quantidade">
+                                    Restrição: 
+                                </div>
+                                <div *ngIf="slot.priority != null" class="quantidade">
+                                    {{ slot.priority }}
+                                </div>
+                                <div *ngIf="slot.priority == null" class="quantidade">
+                                    nenhuma
+                                </div>
+                            </div>
+                            
+    
+                        </div>    
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!--div class="bottom-options">
+                <div class="btn save">
+                    <div class="btn-name">
+                        Salvar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                </div>
+    
+                <div class="btn cancel" (click)="goBack()">
+                    <div class="btn-name">
+                        Cancelar
+                    </div>
+                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                </div>
+            </div>
+        </div-->
+
+        
+    </div>
+</div>
+
+
+

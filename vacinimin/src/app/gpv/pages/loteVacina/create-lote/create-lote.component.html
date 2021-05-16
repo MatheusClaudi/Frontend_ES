@@ -1,0 +1,67 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Dados de lote vacina
+            </div>
+        </div>
+        
+        <form [formGroup]="loteVacinaDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+                        
+                            <div class="field">
+                                <div class="field-tittle"> Nome: </div>
+                                <input formControlName="name" class="field-box">
+                                <div *ngFor="let error of loteVacinaFormErrors.errorMessages.name">
+                                    <div *ngIf="hasErrorWith(loteVacinaDataForm,'name', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Quantidade inicial: </div>
+                                <input formControlName="quantity" class="field-box tiny-field">
+                                <div *ngFor="let error of loteVacinaFormErrors.errorMessages.quantity">
+                                    <div *ngIf="hasErrorWith(loteVacinaDataForm,'quantity', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                        </div>    
+                    </div>
+    
+                
+                </div>
+    
+            </div>
+    
+            <div class="bottom-options">
+                <div class="btn save" (click)="submitForm()">
+                    <div class="btn-name">
+                        Salvar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                </div>
+    
+                <div class="btn cancel" (click)="cancelFormSubmition()">
+                    <div class="btn-name">
+                        Cancelar
+                    </div>
+                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                </div>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
+

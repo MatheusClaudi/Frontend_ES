@@ -16,17 +16,11 @@
         
         <div class="optionsList">
 
-            <div class="option">
-                Dados pessoais
+            
+            <div (click)="goToPage(option.path)" class="option" *ngFor="let option of navigation.paths">
+                {{ option.str }}
             </div>
 
-            <div class="option">
-                Postos de vacinação
-            </div>
-
-            <div class="option">
-                Agendamentos
-            </div>
         </div>
     </div>
 

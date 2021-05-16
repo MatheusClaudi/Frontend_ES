@@ -1,0 +1,187 @@
+.content {
+    width: 100%;
+}
+
+.card {
+    width: 96%;
+    min-height: calc(100vh - var(--height-topbar) - 31px);
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    margin-right: 2%;
+    border: 1px solid var(--c-gray-card-border-3);
+    box-sizing: border-box;
+    border-radius: 20px;
+} 
+
+.top-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+.top-col {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.col-20 {
+    margin-top: 15px;
+}
+
+.top-btns .btn {
+    margin-left: 15px;
+}
+
+.page-tittle {
+    margin-top: 25px;
+    margin-left: 30px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    color: var( --c-black-text);
+}
+
+.columns {
+    display: grid;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 96%;
+    grid-template-columns: 35% 65%;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.bottom-options .cancel {
+    width: 145px;
+    margin-left: 20px;
+}
+
+.bottom-options .save {
+    width: 120px;
+}
+
+.section {
+    margin-top: 21px;
+    margin-left: 45px;
+}
+
+.section-name {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: var( --c-black-field-text-content); 
+}
+
+.section-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.btn {
+    padding-top: 7px;
+    padding-left: 18px;
+    width: 193px;
+}
+
+.field-box {
+    width: 145px;
+}
+
+.tiny-field {
+    width: 63px;
+}
+
+.large-field {
+    width: 253px;
+}
+
+.btn-medium {
+    width: 163px;
+}
+
+.btn-selector {
+    width: 186px;
+    margin-top: 24px;
+    margin-left: 9px;
+}
+
+.textarea {
+    height: 110px;
+    width: 250px;
+}
+
+.area {
+    margin-left: 80px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .top-options {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top-row {
+        margin-left: 40px;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .top-row .btn {
+        margin-top: 15px;
+    }
+
+    .col-20 {
+        margin-top: 0px;
+    }
+
+    .top-col {
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .bottom-options {
+        justify-content: center;
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .columns {
+    
+        grid-template-columns: none;
+    
+    }
+
+   
+}

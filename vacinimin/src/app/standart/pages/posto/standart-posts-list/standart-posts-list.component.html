@@ -1,0 +1,59 @@
+<div class="content">
+    <div class="card">
+        
+        <div class="card-content">
+
+            <div class="page-tittle">
+                Postos de vacinação
+            </div>
+            <div class="columns">
+                <div class = "column">
+                    <form [formGroup]="filterForm">
+                        <div class="section">
+                     
+                            <div class="section-content line">
+                                <div class="field">
+                                    <div class="field-tittle"> Nome cidade: </div>
+                                    <input formControlName="city" class="field-box search">
+                                </div>
+                    
+                    
+                                <div (click)="search()" class="btn search-btn" >
+                                    <div class="btn-name">
+                                        Procurar
+                                    </div>
+                        
+                                    <img class="btn-icon" src="../../../../../assets/icons/search2.svg">
+                                </div>
+                            </div>    
+                        </div>
+                    </form>
+                    
+
+                    <div class="list-items">
+                        <div *ngFor="let posto of postosVacinacao" class="list-item">
+                            <div>
+                                <div class="row a">
+                                    <div (click)=" goToPostoVacinacao(posto)" class="name"> {{posto.name}}</div>
+                                    <div class="cidade"> ({{posto.city}})</div>
+                                </div>
+                                <div  class="row b">
+                                    <div class="rua"> {{posto.address}}</div>
+                                    <div class="cep"> - {{posto.zipCode}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <app-pagination [data]="{numberOfPages: numberOfPages, currentPage: page}" (newPageSelectedEvent)="test($event)"></app-pagination>
+
+                    
+
+    
+                </div>  
+            </div>
+        </div> 
+
+    </div>
+</div>

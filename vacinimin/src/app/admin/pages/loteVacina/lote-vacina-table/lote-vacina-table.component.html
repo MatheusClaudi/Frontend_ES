@@ -1,0 +1,73 @@
+
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Listagem de lotes de vacinas
+            </div>
+
+            <div class="top-btns">
+                <div (click)="createLoteVacina()" class="btn add">
+                    <img class="btn-icon add-icon" src="../../../assets/icons/plus.svg">
+
+                    <div class="btn-name">
+                        Criar
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="outer">
+            <table class="table">
+              <thead>
+                <tr class="columns-names">
+                  <th class="alert-box">ID</th>
+                  <th class="alert-box">IDPosto</th>
+                  <th class="alert-box">Nome</th>
+                  <th class="alert-box">Quantidade disponível</th>
+                  <th class="alert-box">Opções</th>
+                </tr>
+ 
+              </thead>
+              <tbody *ngFor="let loteVacina of lotesVacina; let i = index">
+                  <tr>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ loteVacina.id }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ loteVacina.stationId }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ loteVacina.name }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ loteVacina.quantity }}</span>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <div class="table-row  icons-table-row" >
+                        <button (click)="editLoteVacina(loteVacina)" class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/pen.svg">
+                        </button>
+                       
+                      </div>
+                    </td>
+                  </tr>
+                  
+              </tbody>
+            </table>
+          </div>
+        
+          <app-pagination [data]="{numberOfPages: numberOfPages, currentPage: 1}" (newPageSelectedEvent)="test($event)"></app-pagination>
+
+    </div>
+</div>

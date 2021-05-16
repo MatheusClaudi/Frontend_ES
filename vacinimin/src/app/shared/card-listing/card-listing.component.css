@@ -1,4 +1,3 @@
-@media screen and (max-width: 700px) {
 
     .title-card-listing{
         position: absolute;
@@ -56,9 +55,9 @@
     
     .info2{
         position: absolute;
-        width: 74px;
+        width: 110px;
         height: 16px;
-        left: 73%;
+        left: 62%;
         top: 56px;
         
         font-family: Roboto;
@@ -89,11 +88,12 @@
         border: 1px solid #555555;
         box-sizing: border-box;
         border-radius: 15px;
+        margin-left: max(16%, 235px);
     }
 
     p.title-card-listing{
         position: absolute;
-        width: 20%;
+        width: 45%;
         height: 26px;
         left: 41px;
         top: 15px;
@@ -105,9 +105,10 @@
         line-height: 26px;
     }
 
-    .Pendente{
+    .Pendente, .info-blue{
         color: #03A9F4;
     }
+
 
     .Cancelado{
         color: #FF1744;
@@ -117,4 +118,10 @@
         color: #00C853;
     }
 
-}
+
+    @media screen and (max-width: 700px) {
+
+        .card-content{
+            margin-left: 0px;
+        }
+    }

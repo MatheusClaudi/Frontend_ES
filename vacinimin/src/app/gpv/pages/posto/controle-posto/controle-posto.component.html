@@ -1,0 +1,89 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Posto de Vacinacao
+            </div>
+            
+        </div>
+        
+        <form [formGroup]="postoVacinacaoDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> ID: </div>
+                                <input formControlName="id" class="field-box tiny-field">
+                          
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Nome: </div>
+                                <input formControlName="name" class="field-box">
+                         
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Qtd vacinas: </div>
+                                <input formControlName="qtdVaccine" class="field-box tiny-field">
+     
+                            </div>
+    
+                        </div>    
+                    </div>
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Endereço:
+                        </div>
+                        <div class="section-content">
+    
+                            <div class="field">
+                                <div class="field-tittle"> Estado: </div>
+                                <input formControlName="state" class="field-box">
+                                
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Cidade: </div>
+                                <input formControlName="city" class="field-box">
+                                
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Bairro: </div>
+                                <input formControlName="district" class="field-box">
+                              
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Rua: </div>
+                                <input formControlName="address" class="field-box large-field">
+                                
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Cep: </div>
+                                <input formControlName="zipCode" class="field-box">
+                                
+                            </div>
+    
+                        </div>    
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        
+
+    </div>
+</div>
+
+
+

@@ -1,0 +1,36 @@
+<div class="pagination">
+    <div class="page-choose-box">
+
+      <div class="page-choose" (click)="selectNewPage(page)" *ngFor="let page of pageList; let i = index">
+        
+        <div *ngIf="page == 0" class="page-choose-item">
+          ...
+        </div>
+
+        <div *ngIf="page > 0 && page == currentPage" class="page-choose-item selected-background">
+          {{ page }}
+        </div>
+
+        <div *ngIf="page > 0 && page != currentPage" class="page-choose-item">
+          {{ page }}
+        </div>
+
+
+        <div *ngIf="i != pageList.length-1" class="page-choose-border"></div>
+      </div>
+
+    </div>
+
+
+    <!--div class="page-choose-box">
+      <div class="page-choose-item">
+        5
+      </div>
+
+      <div class="page-choose-item">
+        <div>
+          <img src="../../../assets/icons/chevron-down.svg">
+        </div>
+      </div>
+    </div-->
+</div>

@@ -1,17 +1,34 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StandartPostListsComponent } from './standart-posts-list/standart-posts-list.component';
-import { StantardtPostDataComponent } from './stantardt-post-data/stantardt-post-data.component';
-import { StandartSchedulesComponent } from './standart-schedules/standart-schedules.component';
-import { StandartSchedulesDataComponent } from './standart-schedules-data/standart-schedules-data.component';
+import { DadosPessoaisComponent } from './pages/user/dados-pessoais/dados-pessoais.component';
+import { StandartComponent } from './standart/standart.component';
+import { AgendamentoComponent } from './pages/agendamentos/agendamento/agendamento.component';
+import { StandartPostListsComponent } from './pages/posto/standart-posts-list/standart-posts-list.component';
+import { StantardtPostDataComponent } from './pages/posto/stantardt-post-data/stantardt-post-data.component';
+
+
 
 const routes: Routes = [
-  { path: 'posts', component: StandartPostListsComponent, children: []},
-  // colocar id de acordo com o posto
-  { path: 'posts/1', component: StantardtPostDataComponent, children: []},
-  { path: 'schedules', component: StandartSchedulesComponent, children: []},
-  //colocar id de acordo com o agendamento
-  { path: 'schedules/1', component: StandartSchedulesDataComponent, children: []},
+  { path: '', component: StandartComponent, children: [
+    { path: '', component: DadosPessoaisComponent, outlet: 'standart'},
+  ]},
+
+  { path: 'dadosPessoais', component: StandartComponent, children: [
+    { path: '', component: DadosPessoaisComponent, outlet: 'standart'},
+  ]},
+
+  { path: 'agendamento', component: StandartComponent, children: [
+    { path: '', component: AgendamentoComponent, outlet: 'standart'},
+  ]},
+
+  
+  { path: 'posts', component: StandartComponent, children: [
+    { path: '', component: StandartPostListsComponent, outlet: 'standart'},
+  ]},
+
+  { path: 'postData', component: StandartComponent, children: [
+    { path: '', component: StantardtPostDataComponent, outlet: 'standart'},
+  ]},
 
 ];
 

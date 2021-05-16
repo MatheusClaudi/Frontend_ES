@@ -1,0 +1,43 @@
+<div class="content">
+    <div class="art">
+        <img class="abstract-art" src="../../../../assets/icons/artAbstract.svg">
+    </div>
+    
+    <div class="card">
+        <div>
+            <div class="card-name">
+                Credenciais
+            </div>
+
+            <form [formGroup]="form">
+                <div class="form-content">
+                    <div class="field">
+                        <div class="field-tittle"> Email: </div>
+                        <input formControlName="email" class="field-box tiny-field">
+                        <div *ngIf="hasErrorWith(form,'email', 'required')" class="error-message"> *Campo necessário</div>
+                    </div>
+        
+                    <div class="field">
+                        <div class="field-tittle"> Senha: </div>
+                        <input formControlName="senha" class="field-box tiny-field">
+                        <div *ngIf="hasErrorWith(form,'senha', 'required')" class="error-message"> *Campo necessário</div>
+                        <div *ngIf="errorLogin" class="error-message"> *Ocorreu um erro no login</div>
+
+                    </div>    
+                </div>
+            </form>
+            
+
+            <div (click)="onSubmit()" class="submit-btn">
+                <p>
+                    Log-in
+                </p>
+            </div>
+            
+        </div>
+
+        <div (click)="goToForgotPassword()" class="forgot">
+            Esqueci a senha
+        </div>
+    </div>
+</div>

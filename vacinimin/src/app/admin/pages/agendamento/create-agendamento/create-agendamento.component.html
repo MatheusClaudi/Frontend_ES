@@ -1,0 +1,217 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Dados de agendamento
+            </div>
+        </div>
+        
+        <form [formGroup]="agendamentoDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> ID: </div>
+                                <input formControlName="id" class="field-box tiny-field">
+                                <div *ngFor="let error of agendamentoFormErrors.errorMessages.id">
+                                    <div *ngIf="hasErrorWith(agendamentoDataForm,'id', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Nº Dose: </div>
+                                <input formControlName="dose" class="field-box tiny-field">
+                                <div *ngFor="let error of agendamentoFormErrors.errorMessages.dose">
+                                    <div *ngIf="hasErrorWith(agendamentoDataForm,'dose', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> ID Cliente: </div>
+                                <input formControlName="idCliente" class="field-box tiny-field">
+                                <div *ngFor="let error of agendamentoFormErrors.errorMessages.idCliente">
+                                    <div *ngIf="hasErrorWith(agendamentoDataForm,'idCliente', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                        </div>    
+                    </div>
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados do posto:
+                        </div>
+                        <div class="section-content">
+    
+                            <div class="field">
+                                <div class="field-tittle"> ID Posto: </div>
+                                <input formControlName="idPosto" class="field-box tiny-field">
+                                <div *ngFor="let error of agendamentoFormErrors.errorMessages.idPosto">
+                                    <div *ngIf="hasErrorWith(agendamentoDataForm,'idPosto', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="row">
+                                <select class="btn-selector btn-selector-name" name="filterTipoUser">
+                                    <option class="btn-selector-name" value="australia">Seleção de posto</option>
+                                    <option class="btn-selector-name" value="australia">Australia</option>
+                                    <option class="btn-selector-name" value="canada">Canada</option>
+                                    <option class="btn-selector-name" value="usa">USA</option>
+                                </select>       
+                                <div class="btn-selector-icon"></div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Data de calendário: </div>
+                                <input formControlName="dataAgendamento" class="field-box">
+                                <div *ngFor="let error of agendamentoFormErrors.errorMessages.dataAgendamento">
+                                    <div *ngIf="hasErrorWith(agendamentoDataForm,'dataAgendamento', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="row">
+                                <select class="btn-selector btn-selector-name" name="filterTipoUser">
+                                    <option class="btn-selector-name" value="australia">Seleção de data</option>
+                                    <option class="btn-selector-name" value="australia">Australia</option>
+                                    <option class="btn-selector-name" value="canada">Canada</option>
+                                    <option class="btn-selector-name" value="usa">USA</option>
+                                </select>       
+                                <div class="btn-selector-icon"></div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> ID Slot: </div>
+                                <input formControlName="idSlotHorario" class="field-box tiny-field">
+                                <div *ngFor="let error of agendamentoFormErrors.errorMessages.idSlotHorario">
+                                    <div *ngIf="hasErrorWith(agendamentoDataForm,'idSlotHorario', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="row">
+                                <select class="btn-selector btn-selector-name" name="filterTipoUser">
+                                    <option class="btn-selector-name" value="australia">Seleção de slot</option>
+                                    <option class="btn-selector-name" value="australia">Australia</option>
+                                    <option class="btn-selector-name" value="canada">Canada</option>
+                                    <option class="btn-selector-name" value="usa">USA</option>
+                                </select>       
+                                <div class="btn-selector-icon"></div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> ID Lote de vacina: </div>
+                                <input formControlName="idLoteVacina" class="field-box tiny-field">
+                                <div *ngFor="let error of agendamentoFormErrors.errorMessages.idLoteVacina">
+                                    <div *ngIf="hasErrorWith(agendamentoDataForm,'idLoteVacina', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="row">
+                                <select class="btn-selector btn-selector-name" name="filterTipoUser">
+                                    <option class="btn-selector-name" value="australia">Seleção de vacina</option>
+                                    <option class="btn-selector-name" value="australia">Australia</option>
+                                    <option class="btn-selector-name" value="canada">Canada</option>
+                                    <option class="btn-selector-name" value="usa">USA</option>
+                                </select>       
+                                <div class="btn-selector-icon"></div>
+                            </div>
+                            
+    
+                        </div>    
+                    </div>
+                </div>
+    
+                <div class = "column">
+    
+                    <div class="section">
+                
+                        <div class="check-radio-tittle">
+                            Data de abertura
+                        </div>
+                        
+                        <div class="field">
+                            <div class="field-tittle"> Data abertura: </div>
+                            <input formControlName="dataAbertura" class="field-box">
+                            <div *ngFor="let error of agendamentoFormErrors.errorMessages.dataAbertura">
+                                <div *ngIf="hasErrorWith(agendamentoDataForm,'dataAbertura', error.type)" class="error-message"> {{ error.message }}</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="section">
+                
+                        <div class="check-radio-tittle">
+                            Status:
+                        </div>
+
+                        <div class="section-content">
+                            
+                            <div class="row">
+                                <div class="check-radio">
+                                    <p>
+                                        <input formControlName="statusAgendamento" value="Ativo" type="radio" id="ativo" name="statusAgendamento">
+                                        <label class="check-radio-option-name" for="ativo">Ativo</label>
+                                    </p>
+                                    <p>
+                                        <input formControlName="statusAgendamento" value="Vencido" type="radio" id="vencido" name="statusAgendamento">
+                                        <label class="check-radio-option-name" for="vencido">Vencido</label>
+                                    </p>
+                                    <p>
+                                        <input formControlName="statusAgendamento" value="Cancelado" checked="" type="radio" id="cancelado" name="statusAgendamento">
+                                        <label class="check-radio-option-name" for="cancelado">Cancelado</label>
+                                    </p>
+        
+                                    <div *ngFor="let error of agendamentoFormErrors.errorMessages.statusAgendamento">
+                                        <div *ngIf="hasErrorWith(agendamentoDataForm,'statusAgendamento', error.type)" class="error-message"> {{ error.message }}</div>
+                                    </div>
+                                </div>
+                            </div>   
+                            
+                            <div class="field area">
+                                <div class="field-tittle"> Comentários: </div>
+                                <textarea formControlName="comentario" class="field-box textarea"></textarea>
+                                <div *ngFor="let error of agendamentoFormErrors.errorMessages.comentario">
+                                    <div *ngIf="hasErrorWith(agendamentoDataForm,'comentario', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>                      
+                </div>
+            </div>
+    
+            <div class="bottom-options">
+                <div class="btn save" (click)="submitForm()">
+                    <div class="btn-name">
+                        Salvar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                </div>
+    
+                <div class="btn cancel" (click)="cancelFormSubmition()">
+                    <div class="btn-name">
+                        Cancelar
+                    </div>
+                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                </div>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
+

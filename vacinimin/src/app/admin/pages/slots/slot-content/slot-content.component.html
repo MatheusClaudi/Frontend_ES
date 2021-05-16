@@ -1,0 +1,111 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Dados de slot
+            </div>
+
+
+        </div>
+        
+        <form [formGroup]="slotDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+
+
+                            <div class="field">
+                                <div class="field-tittle"> ID: </div>
+                                <input formControlName="id" class="field-box tiny-field">
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> ID posto: </div>
+                                <input formControlName="idPosto" class="field-box tiny-field">
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Hora de início: </div>
+                                <input formControlName="initialDate" class="field-box large-field">
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Hora de fim: </div>
+                                <input formControlName="finalDate" class="field-box large-field">
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Quantidade total: </div>
+                                <input formControlName="qtdVaccine" class="field-box medium-field">
+                            </div>             
+
+                            <div class="field">
+                                <div class="field-tittle"> Quantidade ocupada: </div>
+                                <input formControlName="ocupation" class="field-box medium-field">
+                            </div>                   
+                        </div> 
+                        
+                    </div>
+
+                    <div class="section">
+                        <div class="section-name">
+                            Agendar:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> ID usuário: </div>
+                                <input formControlName="idUsuario" class="field-box medium-field">
+                            </div>
+
+
+                            <div (click)="associateUser()" class="btn save agendar" >
+                                <div class="btn-name">
+                                    Agendar slot
+                                </div>
+                    
+                                <img class="btn-icon" src="../../../../../assets/icons/calendar.svg">
+                            </div>
+
+                            <div *ngIf="errorVaga" class="error-message"> *Não existem vagas no slot</div>
+                            <div *ngIf="errorAberto" class="error-message"> *Usuário tem agendamento ativos</div>
+                            <div *ngIf="errorDuasDoses" class="error-message"> *Usuário já tomou duas doses</div>
+                            <div *ngIf="errorFalha" class="error-message"> *Falha ao marcar agendamento</div>
+                            <div *ngIf="errorUser" class="error-message"> *Usuário não existe</div>
+
+                        </div>                     
+                    </div>
+                </div>
+    
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="check-radio-tittle">
+                            Prioridade do slot
+                        </div>
+
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Descrição de prioridade: </div>
+                                <textarea formControlName="priority" class="field-box large-field"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
+

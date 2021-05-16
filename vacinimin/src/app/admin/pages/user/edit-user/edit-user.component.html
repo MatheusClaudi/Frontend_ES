@@ -1,0 +1,198 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Dados de usuários
+            </div>
+
+        </div>
+        
+        <form [formGroup]="userDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Id: </div>
+                                <input formControlName="id" class="field-box tiny-field">
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Nome: </div>
+                                <input formControlName="name" class="field-box">
+                                <div *ngFor="let error of userFormErrors.errorMessages.name">
+                                    <div *ngIf="hasErrorWith(userDataForm,'name', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Email: </div>
+                                <input formControlName="email" class="field-box large-field">
+                            </div>
+    
+    
+                            <div class="field">
+                                <div class="field-tittle"> Cpf: </div>
+                                <input formControlName="cpf" class="field-box">
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div *ngIf="firstRegistro" class="section">
+                        <div class="section-name">
+                            Primeira dose:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Id slot: </div>
+                                <input [value]="firstRegistro.slotId" class="field-box tiny-field" disabled> 
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Vacina: </div>
+                                <input [value]="firstRegistro.name" class="field-box" disabled>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Data vacinação: </div>
+                                <input [value]="firstRegistro.date" class="field-box large-field" disabled>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div *ngIf="secondRegistro" class="section">
+                        <div class="section-name">
+                            Segunda dose:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Id slot: </div>
+                                <input [value]="secondRegistro.slotId" class="field-box tiny-field" disabled> 
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Vacina: </div>
+                                <input [value]="secondRegistro.name" class="field-box" disabled>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Data vacinação: </div>
+                                <input [value]="secondRegistro.date" class="field-box large-field" disabled>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div *ngIf="agendamentoUser" class="section">
+                        <div class="section-name">
+                            {{agendamentoUser.n}}º Agendamento:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Id slot: </div>
+                                <input [value]="agendamentoUser.slotId" class="field-box tiny-field" disabled> 
+                            </div>
+
+                            <div class="btn cancel2 large-field" (click)="cancelarAgendamento()">
+                                <div class="btn-name">
+                                    Cancelar agendamento
+                                </div>
+                                <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                            </div>
+                        </div>    
+                    </div>
+
+                </div>
+    
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="check-radio-tittle">
+                            Permissão atual:
+                        </div>
+            
+                        <div class="check-radio">
+                            <p *ngIf="user.role == 'client'">
+                                <input value="client" type="radio" id="client" checked>
+                                <label class="check-radio-option-name" for="client">Cliente</label>
+                            </p>
+                            <p *ngIf="user.role == 'manager'">
+                                <input value="manager" type="radio" id="manager" checked>
+                                <label class="check-radio-option-name" for="manager">Gpv</label>
+                            </p>
+                            <p *ngIf="user.role == 'admin'">
+                                <input value="admin" type="radio" id="admin" checked>
+                                <label class="check-radio-option-name" for="admin">Admin</label>
+                            </p>
+                        </div>
+
+                    </div>
+                    
+                    <div  *ngIf="user.role == 'manager'" class="section">
+                        <div class="section-name">
+                            Dados posto:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Id: </div>
+                                <input formControlName="idPosto" class="field-box tiny-field">
+                                <div *ngFor="let error of userFormErrors.errorMessages.postoAssociado">
+                                    <div *ngIf="hasErrorWith(userDataForm,'idPosto', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+    
+                            <!--div class="row">
+                                <select class="btn-selector btn-selector-name" id="FSUsuario" name="filterTipoUser">
+                                    <option class="btn-selector-name" value="australia">Seleção de posto</option>
+                                    <option class="btn-selector-name" value="australia">Australia</option>
+                                    <option class="btn-selector-name" value="canada">Canada</option>
+                                    <option class="btn-selector-name" value="usa">USA</option>
+                                </select>       
+                                <div class="btn-selector-icon"></div>
+                            </div-->
+                        </div>    
+                    </div>
+
+                    <div class="section">
+                        <div *ngIf="errorPedido" class="error-message"> *Pedido negado, confira as informações</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+    
+            <div  *ngIf="userDataForm.dirty" class="bottom-options">
+
+                <div class="btn save" (click)="submitForm()">
+                    <div class="btn-name">
+                        Salvar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                </div>
+    
+                <div class="btn cancel" (click)="cancelFormSubmition()">
+                    <div class="btn-name">
+                        Cancelar
+                    </div>
+                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                </div>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
+

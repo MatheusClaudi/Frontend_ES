@@ -1,0 +1,168 @@
+.content {
+    width: 100%;
+}
+
+.card {
+    width: 96%;
+    min-height: calc(100vh - var(--height-topbar) - 31px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 1px solid var(--c-gray-card-border-3);
+    box-sizing: border-box;
+    border-radius: 20px;
+} 
+
+.card-content {
+    display: grid;
+    padding-left: min(5%, 34px);
+    padding-right: min(calc(5% + 35px), 59px);
+    max-width: 330px;
+    grid-template-columns: 100%;
+}
+
+.page-tittle {
+    margin-top: 25px;
+    margin-left: 0px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    color: var( --c-black-text);
+}
+
+.section-name {
+    margin-bottom: 20px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: var( --c-black-field-text-content); 
+}
+
+.field-box {
+    width: 100%;
+}
+
+.search {
+    width: 150px;
+}
+
+.plus-btn {
+    margin-top: 23px;
+    margin-left: 20px;
+}
+
+.input-area {
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.inputs {
+    margin-left: 10px;
+}
+
+.bottom-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.bottom-options .cancel {
+    width: 145px;
+    margin-left: 20px;
+}
+
+.bottom-options .save {
+    width: 120px;
+}
+
+.btn {
+    padding-top: 7px;
+    padding-left: 18px;
+    width: 120px;
+}
+
+.line {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.list-items {
+    margin-top: 40px;
+}
+
+.list-item {
+    margin-bottom: 20px;
+    width: 400px;
+    height: 91px;
+    border: 1px solid #555555;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.number {
+    font-family: var(--secundary-font);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+
+    margin-top: 1px;
+    margin-left: 10px;
+    color: #585858;
+}
+
+.sub {
+
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 21px;
+
+    color: #585858;
+}
+
+.name {
+    cursor: pointer;
+    font-family: var(--primary-font);
+    font-size: 24px;
+    line-height: 26px;
+
+    color: #1E1E1E;
+}
+
+
+.a{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .list-item {   
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .list-item {   
+        width: 320px;
+    }
+}
+

@@ -1,0 +1,111 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Dados de lote vacina
+            </div>
+        </div>
+        
+            <div class="columns">
+                <div class = "column">
+
+                <form [formGroup]="loteVacinaDataForm">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Id: </div>
+                                <input formControlName="id" class="field-box tiny-field">
+                                
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Id posto: </div>
+                                <input formControlName="stationId" class="field-box tiny-field">
+                                
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Nome: </div>
+                                <input formControlName="name" class="field-box">
+                                <div *ngFor="let error of loteVacinaFormErrors.errorMessages.name">
+                                    <div *ngIf="hasErrorWith(loteVacinaDataForm,'name', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Quantidade: </div>
+                                <input formControlName="quantity" class="field-box tiny-field">
+                                <div *ngFor="let error of loteVacinaFormErrors.errorMessages.quantity">
+                                    <div *ngIf="hasErrorWith(loteVacinaDataForm,'quantity', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div *ngIf="errorPedido" class="error-message"> *Pedido negado, confira as informações</div>
+                            <div *ngIf="errorQuantidade" class="error-message"> *Não se pode diminuir doses</div>
+
+    
+                        </div>    
+                    </div>
+
+                </form>
+
+                    <div *ngIf="loteVacinaDataForm.dirty" class="bottom-options">
+                        <div class="btn save" (click)="submitForm()">
+                            <div class="btn-name">
+                                Salvar
+                            </div>
+                
+                            <img class="btn-icon" src="../../../assets/icons/check.svg">
+                        </div>
+            
+                        <div class="btn cancel" (click)="cancelFormSubmition()">
+                            <div class="btn-name">
+                                Cancelar
+                            </div>
+                            <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                        </div>
+                    </div>
+
+                <form [formGroup]="agendamentoDataForm">
+
+                    <div class="section">
+                        <div class="section-name">
+                            Confimar agendamento:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> ID usuário: </div>
+                                <input formControlName="idUsuario" class="field-box medium-field">
+                            </div>
+
+
+                            <div (click)="confirmarAgendamento()" class="btn save agendar" >
+                                <div class="btn-name">
+                                    Confirmar
+                                </div>
+                    
+                                <img class="btn-icon" src="../../../../../assets/icons/calendar.svg">
+                            </div>
+
+                            <div *ngIf="errorVaga" class="error-message"> *Não existem vagas disponíveis</div>
+                            <div *ngIf="errorFirst" class="error-message"> *Erro ao confirmar 1º agendamento</div>
+                            <div *ngIf="errorSecond" class="error-message"> *Erro ao confirmar 1º agendamento</div>
+                        </div>                     
+                    </div>
+                </form>
+                </div>
+    
+
+            </div>    
+
+    </div>
+</div>
+
+
+

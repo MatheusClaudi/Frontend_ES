@@ -1,0 +1,79 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Dados de vacina
+            </div>
+        </div>
+        
+        <form [formGroup]="vacinaDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Id: </div>
+                                <input formControlName="id" class="field-box tiny-field">
+                                <div *ngFor="let error of vacinaFormErrors.errorMessages.id">
+                                    <div *ngIf="hasErrorWith(vacinaDataForm,'id', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Nome: </div>
+                                <input formControlName="nome" class="field-box">
+                                <div *ngFor="let error of vacinaFormErrors.errorMessages.nome">
+                                    <div *ngIf="hasErrorWith(vacinaDataForm,'nome', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Criador: </div>
+                                <input formControlName="criador" class="field-box">
+                                <div *ngFor="let error of vacinaFormErrors.errorMessages.criador">
+                                    <div *ngIf="hasErrorWith(vacinaDataForm,'criador', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="field-tittle"> Nº Doses: </div>
+                                <input formControlName="doses" class="field-box tiny-field">
+                                <div *ngFor="let error of vacinaFormErrors.errorMessages.doses">
+                                    <div *ngIf="hasErrorWith(vacinaDataForm,'doses', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                        </div>    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bottom-options">
+                <div class="btn save" (click)="submitForm()">
+                    <div class="btn-name">
+                        Salvar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                </div>
+    
+                <div class="btn cancel" (click)="cancelFormSubmition()">
+                    <div class="btn-name">
+                        Cancelar
+                    </div>
+                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                </div>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
+

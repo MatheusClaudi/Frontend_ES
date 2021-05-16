@@ -1,0 +1,120 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Dados de registro
+            </div>
+        </div>
+        
+        <form [formGroup]="registroDataForm">
+            <div class="columns">
+                <div class = "column">
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados gerais:
+                        </div>
+    
+                        <div class="section-content">
+                            <div class="field">
+                                <div class="field-tittle"> Id: </div>
+                                <input formControlName="id" class="field-box tiny-field">
+                                <div *ngFor="let error of registroFormErrors.errorMessages.id">
+                                    <div *ngIf="hasErrorWith(registroDataForm,'id', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Hora: </div>
+                                <input formControlName="hora" class="field-box tiny-field">
+                                <div *ngFor="let error of registroFormErrors.errorMessages.hora">
+                                    <div *ngIf="hasErrorWith(registroDataForm,'hora', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <div class="field-tittle"> Dose: </div>
+                                <input formControlName="dose" class="field-box tiny-field">
+                                <div *ngFor="let error of registroFormErrors.errorMessages.dose">
+                                    <div *ngIf="hasErrorWith(registroDataForm,'dose', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                        </div>    
+                    </div>
+    
+                    <div class="section">
+                        <div class="section-name">
+                            Dados cadastrais:
+                        </div>
+                        <div class="section-content">
+    
+                            
+                            <div class="field">
+                                <div class="field-tittle"> ID agendamento: </div>
+                                <input formControlName="idAgendamento" class="field-box tiny-field">
+                                <div *ngFor="let error of registroFormErrors.errorMessages.idAgendamento">
+                                    <div *ngIf="hasErrorWith(registroDataForm,'idAgendamento', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <select class="btn-selector btn-selector-name">
+                                    <option class="btn-selector-name" value="australia">Agendamento</option>
+                                    <option class="btn-selector-name" value="australia">Australia</option>
+                                    <option class="btn-selector-name" value="canada">Canada</option>
+                                    <option class="btn-selector-name" value="usa">USA</option>
+                                </select>       
+                                <div class="btn-selector-icon"></div>
+                            </div>
+                        
+
+                        
+                            <div class="field">
+                                <div class="field-tittle"> ID lote vacina: </div>
+                                <input formControlName="idLoteVacina" class="field-box tiny-field">
+                                <div *ngFor="let error of registroFormErrors.errorMessages.idLoteVacina">
+                                    <div *ngIf="hasErrorWith(registroDataForm,'idLoteVacina', error.type)" class="error-message"> {{ error.message }}</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <select class="btn-selector btn-selector-name">
+                                    <option class="btn-selector-name" value="australia">Lote de vacina</option>
+                                    <option class="btn-selector-name" value="australia">Australia</option>
+                                    <option class="btn-selector-name" value="canada">Canada</option>
+                                    <option class="btn-selector-name" value="usa">USA</option>
+                                </select>       
+                                <div class="btn-selector-icon"></div>
+                            </div>
+                                                       
+                        </div>    
+                    </div>
+                </div>
+
+            </div>
+    
+            <div *ngIf="registroDataForm.dirty" class="bottom-options">
+                <div class="btn save" (click)="submitForm()">
+                    <div class="btn-name">
+                        Salvar
+                    </div>
+        
+                    <img class="btn-icon" src="../../../assets/icons/check.svg">
+                </div>
+    
+                <div class="btn cancel" (click)="cancelFormSubmition()">
+                    <div class="btn-name">
+                        Cancelar
+                    </div>
+                    <img class="btn-icon" src="../../../assets/icons/cancel.svg">
+                </div>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
+

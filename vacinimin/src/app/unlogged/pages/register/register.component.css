@@ -1,0 +1,132 @@
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 96%;
+    min-height: calc(100vh - var(--height-topbar) - 31px);
+    max-width: 455px;
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 20px;
+ 
+    background: #FFFFFF;
+    border: 1px solid #9C9A9A;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    border-radius: 22px;
+} 
+
+.field {
+    margin-left: 90px;
+    margin-bottom: 11px;
+}
+
+.field-box {
+    width: 256px;
+}
+
+.card-name {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+
+    font-family: var(--primary-font);
+    font-size: 24px;
+    line-height: 31px;
+    /* identical to box height */
+
+
+    color: #1E1E1E;
+}
+
+.submit-btn {
+    background: #FFFFFF;
+    border: 1px solid #252525;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 160px;
+    height: 43px;
+    margin-left: 148px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.submit-btn p {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #2E2424;
+    margin-top: 11px;
+    padding-left: 50px;
+}
+
+.sub-card {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    margin-left: 26px;
+    background: #FFFFFF;
+    border: 1px solid #1D1D1D;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 22px;
+}
+
+.sub-card .p {
+    padding-right: 18px;
+    padding-left: 63px ;
+    padding-top: 25px;
+    font-family: var(--primary-font);
+    font-size: 30px;
+    line-height: 39px;
+    /* identical to box height */
+
+
+    color: #1E1E1E;
+}
+
+.inside {
+    margin-left: 125px;
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        max-width: 355px;
+    } 
+
+    .field {
+        margin-left: 40px;
+        margin-bottom: 11px;
+    }
+
+    .card-name {
+        margin-top: 50px;
+        margin-bottom: 35px;
+    }
+
+    .sub-card {
+        width: 330px;
+        margin-left: 11px;
+    }
+    
+    .inside {
+        margin-left: 83px;
+    }
+
+    .submit-btn {
+
+        margin-left: 98px;
+    }
+    
+}

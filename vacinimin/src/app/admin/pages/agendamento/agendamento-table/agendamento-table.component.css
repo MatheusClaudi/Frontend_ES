@@ -1,0 +1,64 @@
+.content {
+    width: 100%;
+}
+
+.card {
+    width: 96%;
+    min-height: calc(100vh - var(--height-topbar) - 31px);
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 1px solid var(--c-gray-card-border-3);
+    box-sizing: border-box;
+    border-radius: 20px;
+} 
+
+.top-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-btns {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+.top-btns .add {
+    width: 120px;
+    justify-content: flex-start;
+    padding-left: 12px;
+    padding-top: 7px;
+}
+
+.add-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.page-tittle {
+    margin-top: 25px;
+    margin-left: 30px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    color: var( --c-black-text);
+}
+
+.alert-box .btn  {
+    padding-left: 9px;
+    padding-right: 15px;
+}
+
+.alert-box .btn .btn-name {
+    padding-top: 4px;
+}
+
+.alert-box .btn .btn-icon  {
+    padding-top: 2px;
+}

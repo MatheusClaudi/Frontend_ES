@@ -1,0 +1,25 @@
+input {
+  border: none;
+  visibility:hidden;
+}
+
+.field-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 42px;
+}
+
+.field {
+    width: 300px;
+}
+.date{
+    margin-top: 12px;
+}
+
+.icon{
+    margin-left: 60px;
+    position: absolute;
+}

@@ -1,0 +1,128 @@
+
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Listagem de agendamentos
+            </div>
+
+            <div class="top-btns">
+                <div (click)="createAgendamento()" class="btn add">
+                    <img class="btn-icon add-icon" src="../../../assets/icons/plus.svg">
+
+                    <div class="btn-name">
+                        Criar
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="outer">
+          <form [formGroup]="filterForm">
+            <table class="table">
+              <thead>
+                <tr class="columns-names">
+                  <th class="alert-box">ID</th>
+                  <th class="alert-box">IDCliente</th>
+                  <th class="alert-box">IDPosto</th>
+                  <th class="alert-box">IDSlot</th>
+                  <th class="alert-box">Data de agendamento</th>
+                  <th class="alert-box">Status</th>
+                  <th class="alert-box">Opções</th>
+                </tr>
+                <tr class="columns-names">
+
+                  <th class="alert-box">
+                    <input type="text" formControlName="idFilter" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" formControlName="idClienteFilter" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text"  formControlName="idPostoFilter" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text"  formControlName="idSlotFilter" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" formControlName="dataAgendamentoFilter" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <select formControlName="statusFilter">
+                      <option value="Ativo">Ativo</option>
+                      <option value="Vencido">Vencido</option>
+                      <option value="Cancelado">Cancelado</option>
+                    </select>
+                  </th>
+                  
+
+                  <th class="alert-box">
+                    <div class="btn blank-btn">
+                      <img class="btn-icon" src="../../../assets/icons/search.svg">
+  
+                      <div class="btn-name blank-btn-name">
+                          Aplicar
+                      </div>
+                  </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let agendamento of agendamentos; let i = index">
+                  <tr>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ agendamento.id }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ agendamento.idCliente }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ agendamento.idPosto }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ agendamento.idSlotHorario}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ dateService.getDateFormat(agendamento.dataAgendamento) }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ agendamento.statusAgendamento }}</span>
+                      </div>
+                    </td>
+
+                    
+                    <td>
+                      <div class="table-row  icons-table-row" >
+                        <button class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/eye.svg">
+                        </button>
+                        <button (click)="editAgendamento(agendamento)" class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/pen.svg">
+                        </button>
+                        <button class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/trash.svg">
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+              </tbody>
+            </table>
+          </form>
+          </div>
+        
+          <app-pagination [data]="{numberOfPages: 8, currentPage: 1}" (newPageSelectedEvent)="test()"></app-pagination>
+
+    </div>
+</div>

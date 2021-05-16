@@ -1,0 +1,48 @@
+.pagination {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .page-choose-box {
+    display: flex;
+    flex-direction: row;
+   
+    height: 30px;
+  
+    border: 1px solid var(--c-black-primary);;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    overflow: hidden;
+  }
+  
+  .page-choose {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .page-choose-item {
+    height: calc(100%);
+    width: 34px;
+    text-align: center;
+  
+    padding-top: 6px;
+    font-family: var(--secondary-font);  
+    color: var( --c-black-text);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .selected-background {
+    background-color: var(--c-gray-popup-fill);
+  }
+  
+  .page-choose-border {
+    width: 1px;
+    height: calc(100%);
+    border-right: 1px solid var(--c-black-primary);
+  }

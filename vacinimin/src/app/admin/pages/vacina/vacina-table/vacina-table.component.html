@@ -1,0 +1,105 @@
+<div class="content">
+    <div class="card">
+        <div class="top-options">
+            <div class="page-tittle">
+                Listagem de vacinas:
+            </div>
+
+            <div class="top-btns">
+                <div (click)="createVacina()" class="btn add">
+                    <img class="btn-icon add-icon" src="../../../assets/icons/plus.svg">
+
+                    <div class="btn-name">
+                        Criar
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="outer">
+          <form [formGroup]="filterForm">
+            <table class="table">
+              <thead>
+                <tr class="columns-names">
+                  <th class="alert-box">ID</th>
+                  <th class="alert-box">Nome</th>
+                  <th class="alert-box">Criador</th>
+                  <th class="alert-box">Nº Dose</th>
+                  <th class="alert-box">Opções</th>
+                </tr>
+                <tr class="columns-names">
+
+                  <th class="alert-box">
+                    <input type="text" formControlName="idFilter" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" formControlName="nomeFilter" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" formControlName="criadorFilter" placeholder="Pesquisar">
+                  </th>
+                  <th class="alert-box">
+                    <input type="text" formControlName="doseFilter" placeholder="Pesquisar">
+                  </th>
+
+                  <th class="alert-box">
+                    <div class="btn blank-btn">
+                      <img class="btn-icon" src="../../../assets/icons/search.svg">
+  
+                      <div class="btn-name blank-btn-name">
+                          Aplicar
+                      </div>
+                  </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let vacina of vacinas; let i = index">
+                  <tr>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ vacina.id }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ vacina.nome }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ vacina.criador }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class=" table-row" >
+                        <span>{{ vacina.doses }}</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="table-row  icons-table-row" >
+                        <button class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/eye.svg">
+                        </button>
+                        <button (click)="editVacina(vacina)" class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/pen.svg">
+                        </button>
+                        <button class="btn-table-list spacer-btn-table">
+                          <img src="../../../assets/icons/trash.svg">
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  
+              </tbody>
+            </table>
+          </form>
+          </div>
+        
+          <app-pagination [data]="{numberOfPages: 8, currentPage: 1}" (newPageSelectedEvent)="test()"></app-pagination>
+
+    </div>
+</div>
+
+

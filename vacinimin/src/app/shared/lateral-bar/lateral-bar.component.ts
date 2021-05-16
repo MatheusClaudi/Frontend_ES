@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ScreenDimensionService } from 'src/app/core/_services/screen/screen-dimension.service';
 
 @Component({
@@ -12,7 +13,9 @@ export class LateralBarComponent implements OnInit {
 
   public tinyScreen = false;
 
-  constructor(private _sd_service: ScreenDimensionService) { }
+  @Input() navigation;
+
+  constructor(private _sd_service: ScreenDimensionService, private router: Router) { }
 
   ngOnInit(): void {
     this.checkTinyScreen();
@@ -40,6 +43,10 @@ export class LateralBarComponent implements OnInit {
 
   onShowMenu() {
     this.showMenu = true;
+  }
+
+  goToPage(path: string) {
+    this.router.navigate([path]);  
   }
 
 }

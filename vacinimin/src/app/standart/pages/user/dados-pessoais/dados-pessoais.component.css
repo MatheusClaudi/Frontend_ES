@@ -1,0 +1,154 @@
+.content {
+    width: 100%;
+}
+
+.card {
+    width: 96%;
+    min-height: calc(100vh - var(--height-topbar) - 31px);
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 1px solid var(--c-gray-card-border-3);
+    box-sizing: border-box;
+    border-radius: 20px;
+} 
+
+.top-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-btns {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+.top-btns .btn {
+    margin-left: 20px;
+}
+
+.page-tittle {
+    margin-top: 25px;
+    margin-left: 30px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    color: var( --c-black-text);
+}
+
+.columns {
+    display: grid;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 96%;
+    grid-template-columns: 55% 45%;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+.bottom-options .cancel {
+    width: 145px;
+    margin-left: 20px;
+}
+
+.bottom-options .save {
+    width: 120px;
+}
+
+.section {
+    margin-top: 21px;
+    margin-left: 45px;
+}
+
+.section-name {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: var( --c-black-field-text-content); 
+}
+
+.section-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.btn {
+    padding-top: 7px;
+    padding-left: 18px;
+    width: 193px;
+}
+
+.field-box {
+    width: 145px;
+}
+
+.tiny-field {
+    width: 63px;
+}
+
+.large-field {
+    width: 253px;
+}
+
+.btn-medium {
+    width: 163px;
+}
+
+.btn-selector {
+    width: 186px;
+    margin-top: 24px;
+    margin-left: 9px;
+}
+
+.cancel2 {
+    margin-top: 24px;
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .top-options {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bottom-options {
+        justify-content: center;
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .columns {
+    
+        grid-template-columns: none;
+
+    }
+
+    
+
+   
+}

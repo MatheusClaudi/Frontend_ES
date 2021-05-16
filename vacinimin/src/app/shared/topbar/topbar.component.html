@@ -7,38 +7,15 @@
 
     <div class="user-menu">
         <div *ngIf="!tinyScreen && showOption " class="options-list">
-            <div class="option">
-                Log-Out
-            </div>
-    
-            <div class="option">
-                Admin            
-            </div>
-    
-            <div class="option">
-                Gpv
-            </div>
-    
-            <div class="option">
-                Cliente
+            
+            <div (click)="goToPage(option)" class="option" *ngFor="let option of options.paths">
+                {{ option.str }}
             </div>
         </div>
 
         <div *ngIf="tinyScreen && showOption" class="card-options-list">
-            <div class="option">
-                Log-Out
-            </div>
-    
-            <div class="option">
-                Admin            
-            </div>
-    
-            <div class="option">
-                Gpv
-            </div>
-    
-            <div class="option">
-                Cliente
+            <div (click)="goToPage(option)" class="option" *ngFor="let option of options.paths">
+                {{ option.str }}
             </div>
         </div>
 
